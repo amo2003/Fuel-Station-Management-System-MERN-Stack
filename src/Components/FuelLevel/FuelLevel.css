@@ -1,0 +1,124 @@
+/* 🔵 Fixed Nav Bar Styles - top, with border and spacing */
+.fuel-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.75);
+  padding: 12px 30px;
+  border-bottom: 2px solid #002791;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(6px);
+}
+
+/* Brand name on the left */
+.navbar-left .nav-brand {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+/* Navigation links on the right */
+.navbar-right a {
+  margin-left: 25px;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.navbar-right a:hover {
+  color: #1abc9c;
+}
+
+
+.fuel-levels-page {
+  padding: 100px 20px 40px; /* ⬅️ increased top padding */
+  background: url('../../assets/f1.jpg') no-repeat center center fixed;
+  background-size: cover;
+  font-family: 'Segoe UI', sans-serif;
+  min-height: 100vh;
+  text-align: center;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.7);
+  background-blend-mode: darken;
+}
+
+
+.horizontal-tank-container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.horizontal-tank-card {
+  background: rgba(255, 255, 255, 0.15); /* increased visibility */
+  border-radius: 12px;
+  padding: 20px 30px;
+  width: 90%;
+  max-width: 600px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+  transition: transform 0.2s ease;
+  backdrop-filter: blur(10px); /* this helps soften the background */
+}
+
+
+
+.horizontal-tank-card:hover {
+  transform: scale(1.02);
+}
+
+.tank-label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.horizontal-tank {
+  background: rgba(255, 255, 255, 0.3); /* lightened for visibility */
+  border-radius: 25px;
+  height: 40px;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.fill {
+  height: 100%;
+  border-radius: 25px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  transition: width 0.5s ease-in-out;
+  color: #fff;
+  font-weight: bold;
+  padding-right: 10px;
+  font-size: 0.9rem;
+  background: linear-gradient(to right, #1abc9c, #16a085);
+  box-shadow: inset 0 0 6px rgba(0,0,0,0.4);
+}
+
+.capacity-info {
+  font-size: 0.9rem;
+  margin-top: 8px;
+  color: #fff;
+}
+
+.last-updated{
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.page-title{
+  font-size: 1.7rem;
+}

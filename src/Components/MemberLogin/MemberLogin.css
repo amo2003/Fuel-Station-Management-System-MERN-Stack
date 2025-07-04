@@ -1,0 +1,114 @@
+/* MemberLogin.css */
+
+.member-login-page {
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #fff;
+  /* Optional overlay for readability */
+  position: relative;
+}
+
+.member-login-page::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.55);
+  z-index: 0;
+}
+
+.member-login-box {
+  position: relative;
+  z-index: 1;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 40px 30px;
+  width: 360px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+  text-align: center;
+}
+
+.member-logo {
+  width: 90px;
+  margin-bottom: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 102, 204, 0.8);
+}
+
+.member-login-box h2 {
+  margin-bottom: 25px;
+  font-weight: 600;
+  letter-spacing: 1.2px;
+  color: #f0f0f0;
+}
+
+.member-login-form input {
+  width: 100%;
+  padding: 12px 15px;
+  margin-bottom: 18px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  outline: none;
+  transition: box-shadow 0.3s ease;
+}
+
+.member-login-form input:focus {
+  box-shadow: 0 0 8px #0099ff;
+}
+
+.member-error {
+  color: #ff6b6b;
+  margin-bottom: 15px;
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.member-login-form button {
+  width: 100%;
+  padding: 12px;
+  background-color: #007acc;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.member-login-form button:hover {
+  background-color: #005fa3;
+}
+
+.register-link {
+  margin-top: 18px;
+  font-size: 0.95rem;
+  color: #cce6ff;
+}
+
+.register-link a {
+  color: #99ccff;
+  text-decoration: underline;
+}
+
+.register-link a:hover {
+  color: #66b2ff;
+}
+
+.member-logo{
+    animation: pulse 2s infinite;
+}
+
+
+@keyframes pulse {
+  0% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.05); opacity: 0.9; }
+  100% { transform: scale(1); opacity: 1; }
+}
