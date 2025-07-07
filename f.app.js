@@ -1,31 +1,39 @@
-
+// app.js
 const express = require("express");
 const mongoose = require("mongoose");
+const cors = require("cors");
+require("dotenv").config(); // ✅ Load environment variables
+
+// Route Imports
 const Memberrouter = require("./Routes/MemberRoutes");
 const Stockrouter = require("./Routes/StockRoutes");
 const salesRoutes = require("./Routes/sales");
-const fuelPriceRoutes = require('./Routes/fuelPriceRoutes'); // ✅ Import
+const fuelPriceRoutes = require('./Routes/fuelPriceRoutes');
 
 const app = express();
-const cors = require("cors");
 
-//middleware
+// Middleware
 app.use(express.json());
 app.use(cors());
+
+// Static file handling
+app.use("/files", express.static("files"));
+
+// Routes
 app.use("/Members", Memberrouter);
 app.use("/Stocks", Stockrouter);
 app.use("/sales", salesRoutes);
-app.use('/fuelprices', fuelPriceRoutes);
+app.use("/fuelprices", fuelPriceRoutes);
 
-
-
-
-app.use("/files", express.static("files"));
-
-
-mongoose.connect("mongodb+srv://<username>:<password>@cluster0.ndjygyf.mongodb.net/")
-.then(()=> console.log("Connected to MongoDB"))
-.then(()=> {
-    app.listen(5000);
+// MongoDB Connection and Server Start
+mongoose.connect(process.env.MONGO_URI, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
 })
-.catch((err)=> console.log((err)));
+.then(() => {
+  console.log("✅ Connected to MongoDB");
+  app.listen(process.env.PORT || 5000, () => {
+    console.log(`🚀 Server running on port ${process.env.PORT || 5000}`);
+  });
+})
+.catch((err) => console.error("❌ MongoDB connection failed:", err));
