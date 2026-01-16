@@ -1,0 +1,105 @@
+/* MemberLogin.css */
+
+.member-login-page {
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Inter', sans-serif;
+  padding: 20px;
+}
+
+.member-login-box {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-radius: 16px;
+  padding: 40px 30px;
+  max-width: 400px;
+  width: 100%;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  animation: fadeInUp 0.6s ease-out;
+}
+
+.member-logo {
+  width: 80px;
+  height: auto;
+  margin-bottom: 15px;
+}
+
+.member-login-box h2 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.member-login-form input {
+  width: 100%;
+  padding: 12px 14px;
+  margin-bottom: 15px;
+  border: none;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.85);
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.member-login-form input:focus {
+  outline: none;
+  background: white;
+  box-shadow: 0 0 0 2px #00c6ff;
+}
+
+.member-login-form button {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(135deg, #00c6ff, #0072ff);
+  color: white;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.member-login-form button:hover {
+  background: linear-gradient(135deg, #0072ff, #00c6ff);
+  transform: translateY(-2px);
+}
+
+.member-error {
+  color: #ff4d4d;
+  margin-bottom: 15px;
+  font-size: 0.9rem;
+}
+
+.register-link {
+  margin-top: 15px;
+  font-size: 0.9rem;
+  color: white;
+}
+
+.register-link a {
+  color: #00c6ff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.register-link a:hover {
+  text-decoration: underline;
+}
+
+/* Smooth fade-in animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

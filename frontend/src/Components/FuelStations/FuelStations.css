@@ -1,0 +1,185 @@
+/* FuelStations.css - Ultra Modern Design */
+.stations-page {
+  min-height: 100vh;
+  background: 
+    linear-gradient(rgba(0, 0, 0, 0.252), rgba(0, 0, 0, 0.236)),
+    url('../../assets/f1.jpg') center/cover fixed;
+  color: white;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+.stations-header {
+  text-align: center;
+  padding: 4rem 2rem 3rem;
+  position: relative;
+}
+
+.s {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1.5rem;
+  animation: pulse 3s infinite alternate;
+}
+
+
+.stations-header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  background: linear-gradient(90deg, #ffd700, #ffffff, #ffd700);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+}
+
+.stations-header p {
+  font-size: 1.4rem;
+  max-width: 700px;
+  margin: 0 auto;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.stations-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.station-card {
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  padding: 2rem;
+  border: 1px solid rgba(255, 215, 0, 0.3);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+.station-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(90deg, #ffd700, transparent);
+}
+
+.station-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+  border-color: rgba(255, 215, 0, 0.6);
+}
+
+.station-card h2 {
+  color: #ffd700;
+  margin-bottom: 1.2rem;
+  font-size: 1.5rem;
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+.station-card h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50px;
+  height: 2px;
+  background: #ffd700;
+}
+
+.home-button-wrapper {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.st-home {
+  padding: 10px 25px;
+  border: none;
+  border-radius: 30px;
+  background: #003b43;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s;
+  text-align: center;
+  min-width: 120px;
+}
+
+.st-home:hover {
+  background: #00838f;
+  transform: scale(1.05);
+}
+
+
+.station-card p {
+  margin-bottom: 1.1rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.station-card strong {
+  color: white;
+  font-weight: 600;
+}
+
+.stations-footer {
+  text-align: center;
+  padding: 2rem;
+  margin-top: 3rem;
+  background: rgba(0, 0, 0, 0.7);
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .stations-header h1 {
+    font-size: 2rem;
+  }
+  
+  .stations-grid {
+    grid-template-columns: 1fr;
+    padding: 1rem;
+  }
+  
+  .station-card {
+    padding: 1.5rem;
+  }
+}
+
+/* Animation for cards when they appear */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.station-card {
+  animation: fadeInUp 0.6s ease forwards;
+  opacity: 0;
+}
+
+.station-card:nth-child(1) { animation-delay: 0.1s; }
+.station-card:nth-child(2) { animation-delay: 0.2s; }
+.station-card:nth-child(3) { animation-delay: 0.3s; }
+.station-card:nth-child(4) { animation-delay: 0.4s; }
+.station-card:nth-child(5) { animation-delay: 0.5s; }

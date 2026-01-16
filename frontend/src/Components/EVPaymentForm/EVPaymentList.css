@@ -1,0 +1,166 @@
+.ev-list-container {
+  background-image: url("../../assets/f1.jpg"); 
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  padding-top: 80px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.payment-list-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 80px;
+  background-color: rgba(0, 7, 104, 0.95);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.payment-navbar-links a {
+  color: white;
+  text-decoration: none;
+  margin-left: 1.5rem;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.payment-navbar-links a:hover {
+  color: #aad9ff;
+}
+
+.payment-navbar-name{
+     display: flex;
+  align-items: center;
+  gap: 10px;
+  color: white;
+  font-size: 15px;
+}
+
+.ev-list-logo {
+  margin-top: 30px;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.ev-list-logo img {
+  width: 120px;
+  border-radius: 50%;
+  background-color: white;
+  padding: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.ev-list-content {
+  max-width: 1500px;
+  margin: 40px auto;
+  color: rgb(0, 0, 0);
+  background-color: rgba(255, 255, 255, 0.658);
+  width: 30rem;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+} 
+
+.ev-list-content h2 {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.table-wrapper {
+  overflow-x: auto;
+}
+
+.ev-list-table {
+  margin-left: 13rem;
+  width: 100rem;
+  border-collapse: collapse;
+  font-size: 15px;
+}
+
+.ev-list-table th,
+.ev-list-table td {
+  padding: 12px;
+  text-align: center;
+  border-bottom: 1px solid #ccc;
+}
+
+.ev-list-table th {
+  background-color: #0051dc72;
+  color: #333;
+}
+
+.payment-search-bar {
+  padding: 8px;
+  margin-left: 13rem;
+  margin-bottom: 15px;
+  width: 100%;
+  max-width: 400px;
+  background-color: rgba(255, 255, 255, 0.529);
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.726);
+  transition: border-color 0.3s ease;
+}
+
+.total-row td {
+  background-color: #f1f8e9;
+  font-weight: bold;
+}
+
+.ev-delete-btn {
+  padding: 6px 7px;
+  background-color: #d32f2f;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  width: 150px;
+  transition: background 0.3s ease;
+}
+
+.ev-delete-btn:hover {
+  background-color: #b71c1c;
+}
+
+.error-text {
+  color: #b00020;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 15px;
+}
+
+
+/*pdf button*/
+.ev-download-pdf-btn {
+  background-color: #0f5bf1; 
+  color: white;
+  padding: 10px 22px;
+  font-size: 16px;
+  width: 300px;
+  margin-left: 13rem;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+  margin-top: 20px;
+  display: inline-block;
+}
+
+.ev-download-pdf-btn:hover {
+  background-color: #1c36c7;
+}
+
+.ev-download-pdf-btn:active {
+  background-color: #2e7031;
+  box-shadow: inset 0 2px 4px rgba(0,0,0,0.3);
+}

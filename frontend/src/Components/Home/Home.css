@@ -1,0 +1,370 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+.home-page {
+  background: linear-gradient(120deg, #e0f7fa, #fefefe);
+  color: #333;
+}
+
+.hero-section {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.hero-slideshow {
+  height: 100%;
+  position: relative;
+}
+
+
+
+.hero-slide {
+  position: absolute;
+  top: 0;
+  left: 100%;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transform: scale(1.1);
+  transition: all 1s ease-in-out;
+}
+
+.hero-slide.active {
+  left: 0;
+  opacity: 1;
+  transform: scale(1);
+  z-index: 1;
+}
+
+.slide-overlay {
+  position: absolute;
+  bottom: 20%;
+  left: 10%;
+  color: white;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
+}
+
+.slide-overlay h1 {
+  font-size: 3.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.slide-overlay p {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+}
+
+.cta-button {
+  padding: 0.7rem 5.1rem;
+  font-size: 1rem;
+  background: #ff6f00;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.cta-button:hover {
+  background: #ff8f00;
+}
+
+.slide-dots {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(0%);
+  display: flex;
+  gap: 10px;
+}
+
+.slide-dots span {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: white;
+  opacity: 0.5;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.slide-dots span.active {
+  background: #ff6f00;
+  opacity: 1;
+}
+
+/*chat button*/
+.chat-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #0072ff, #00c6ff);
+  color: white;
+  font-size: 24px;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0px 4px 12px rgba(0,0,0,0.25);
+  transition: transform 0.3s ease, background 0.3s ease;
+  z-index: 9999; /* Always on top */
+}
+
+.chat-button:hover {
+  transform: scale(1.1);
+  background: linear-gradient(135deg, #00c6ff, #0072ff);
+}
+
+
+/* Features Section */
+.features-section {
+  display: flex;
+  justify-content: space-around;
+  padding: 4rem 2rem;
+  background: #f9f9f9;
+}
+
+.feature-card {
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  width: 25%;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-10px);
+}
+
+.feature-card img {
+  width:350px;
+  height:200px;
+  margin-bottom: 1rem;
+  border-radius: 10%;
+  object-fit: cover;
+}
+
+.feature-card h3 {
+  color: #002564;
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.feature-card p {
+  font-size: 1rem;
+  color: #000000;
+}
+
+/* Auth Section */
+.auth-section {
+  padding: 4rem 2rem;
+  background: linear-gradient(to right, #04263d, #281e00);
+}
+
+.auth-container {
+  max-width: 600px;
+  margin: auto;
+  background: rgba(255, 255, 255, 0.75);
+  border-radius: 20px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+  padding: 2rem;
+  backdrop-filter: blur(10px);
+  transition: all 0.4s ease;
+}
+
+.login-form input {
+  width: 100%;
+  margin: 10px 0;
+  padding: 0.8rem;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  outline: none;
+  transition: border 0.3s;
+}
+
+.login-form input:focus {
+  border-color: #002c6f;
+}
+
+.login-form button {
+  width: 100%;
+  padding: 0.8rem;
+  background: #000752;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+.form-options {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.85rem;
+  margin-top: 0.5rem;
+}
+
+.welcome-content {
+  text-align: center;
+}
+
+.welcome-content .logo img {
+  width: 80px;
+  margin-bottom: 0.5rem;
+  border-radius: 30%;
+}
+
+.welcome-content h2 {
+  font-size: 2rem;
+  color: #333;
+}
+
+.welcome-content .fuel {
+  color: #002565;
+  font-weight: bold;
+}
+
+.welcome-content .flow {
+  color: #00acc1;
+  font-weight: bold;
+}
+
+.subtitle {
+  font-size: 1rem;
+  color: #000000;
+  margin-bottom: 1.5rem;
+}
+
+.action-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.action-button {
+  padding: 1.5rem;
+  border: none;
+  border-radius: 30px;
+  background: #003b43;
+  color: white;
+  font-size: 18px;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.action-button:hover {
+  background: #00838f;
+}
+
+/* Testimonials Section */
+.testimonials-section {
+  padding: 4rem 2rem;
+  background: #ffffff;
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+.testimonials-container {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+  font-size: 1.1rem;
+}
+
+.testimonial-card {
+  background: #0049e74b;
+  padding: 1.5rem;
+  border-radius: 20px;
+  max-width: 300px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+
+.customer-info {
+  margin-top: 1rem;
+  color: #000000;
+  font-style: italic;
+}
+
+/* Footer Section */
+.modern-home-footer {
+  background: #263238;
+  color: #fff;
+  padding: 3rem 2rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+.home-footer-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.home-footer-section h4 {
+  margin-bottom: 1rem;
+  color: #ffcc80;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.home-footer-section p {
+  margin-bottom: 8px;
+  line-height: 1.3;
+  color: #ccc;
+}
+
+.home-footer-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.home-footer-section ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  display: block;
+  margin: 0.4rem 0;
+  transition: color 0.3s ease;
+}
+
+.home-footer-section ul li a:hover {
+  color: #ffcc80;
+}
+
+.home-footer-bottom {
+  margin-top: 2rem;
+  text-align: center;
+  font-size: 1rem;
+  color: #bbb;
+  border-top: 1px solid #444;
+  padding-top: 1rem;
+}
+
+.social-icons a {
+  margin-right: 10px;
+  font-size: 1.2rem;
+  color: #ffffff;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #ffcc80;
+}

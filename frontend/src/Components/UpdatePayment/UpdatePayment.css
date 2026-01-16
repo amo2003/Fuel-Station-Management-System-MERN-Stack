@@ -1,0 +1,99 @@
+/* Background & Container */
+.payment-page {
+  min-height: 100vh;
+  background: linear-gradient(rgba(0, 0, 50, 0), rgba(0, 0, 50, 0)),
+    url('../../assets/f1.jpg') no-repeat center center fixed;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 60px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Page Heading */
+.payment-page h2 {
+  color: #ffffff;
+  margin-bottom: 30px;
+  font-size: 2rem;
+  font-weight: bold;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
+}
+
+/* Card Box */
+.payment-card {
+  background-color: rgba(255, 255, 255, 0.95);
+  padding: 30px;
+  border-radius: 16px;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  color: #002244;
+}
+
+/* Labels and Paragraphs */
+.payment-card p {
+  margin-bottom: 12px;
+  font-size: 1rem;
+}
+
+.payment-card label {
+  display: block;
+  margin-top: 16px;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #111827;
+}
+
+/* Input Field */
+.price-input {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 1rem;
+  margin-bottom: 20px;
+  transition: border-color 0.3s;
+}
+
+.price-input:focus {
+  border-color: #2563eb;
+  outline: none;
+}
+
+/* Confirm Button */
+.confirm-btn {
+  width: 100%;
+  background-color: #2563eb;
+  color: white;
+  font-weight: bold;
+  padding: 12px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.confirm-btn:hover {
+  background-color: #1e3a8a;
+}
+
+/* Back Link */
+.back-link {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  color: #e0f2fe;
+  background-color: rgba(30, 58, 138, 0.8);
+  padding: 8px 14px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
+  transition: background-color 0.2s ease;
+}
+
+.back-link:hover {
+  background-color: rgba(30, 58, 138, 1);
+}

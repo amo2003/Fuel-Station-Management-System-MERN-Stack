@@ -1,0 +1,132 @@
+.eeevapp-page {
+  min-height: 100vh;
+  background: url('../../assets/f1.jpg') no-repeat center center/cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3rem 1rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #000;
+}
+
+.eeevapp-logo {
+  height: 100px;
+  width: 100px;
+  border-radius: 30px;
+  margin-bottom: 1rem;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+  animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.eeevapp-container {
+  width: 100%;
+  max-width: 600px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 20px;
+  padding: 2rem 2.5rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+  text-align: center;
+}
+
+.eeevapp-heading {
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #004d59;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.15);
+}
+
+.eeevapp-card {
+  background: rgba(255, 255, 255, 0.85);
+  padding: 1.5rem 2rem;
+  border-radius: 15px;
+  box-shadow: inset 0 0 12px rgba(0, 77, 89, 0.15);
+  color: #004d59;
+}
+
+.eeevapp-info p {
+  margin: 1rem 0;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 600;
+}
+
+.eeevapp-icon {
+  color: #057a22;
+  min-width: 22px;
+  min-height: 22px;
+}
+
+.eeevapp-actions {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.eeevapp-btn {
+  flex: 1 1 140px;
+  max-width: 180px;
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.eeeedit-btn {
+  background-color: #004d59;
+  color: white;
+}
+.eeeedit-btn:hover {
+  background-color: #138496;
+}
+
+.eeeh-btn {
+  background-color: #067c22;
+  color: white;
+}
+.eeehh-btn:hover {
+  background-color: #218838;
+}
+
+.eeedelete-btn {
+  background-color: #dc3545;
+  color: white;
+}
+.eeedelete-btn:hover {
+  background-color: #c82333;
+}
+
+.eeevapp-success {
+  color: #28a745;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.eeevapp-error {
+  color: #dc3545;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.eeevapp-loading,
+.eeevapp-error-msg {
+  font-size: 1.2rem;
+  text-align: center;
+  padding: 2rem;
+}

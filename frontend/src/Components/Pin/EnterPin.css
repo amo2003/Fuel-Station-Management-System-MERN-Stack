@@ -1,0 +1,98 @@
+.enter-pin-page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url('../../assets/f1.jpg') no-repeat center center fixed;
+  background-size: cover;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.enter-pin-page::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.4);
+  z-index: 0;
+}
+
+.enter-pin-form {
+  position: relative;
+  z-index: 1;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 40px 30px 30px;
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+  text-align: center;
+  width: 320px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.enter-pin-page .logo {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 20px;
+  object-fit: contain;
+}
+
+.enter-pin-page h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #333;
+}
+
+.enter-pin-form input {
+  width: 100%;
+  padding: 12px 15px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.enter-pin-form input:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0,123,255,0.5);
+}
+
+.enter-pin-form button {
+  width: 100%;
+  padding: 12px 0;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.enter-pin-form button[type="submit"] {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.enter-pin-form button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+.create-pin-btn {
+  background-color: #28a745;
+  color: #fff;
+}
+
+.create-pin-btn:hover {
+  background-color: #1e7e34;
+}
+
+.error-msg {
+  color: #d93025;
+  margin-bottom: 10px;
+  font-size: 14px;
+}

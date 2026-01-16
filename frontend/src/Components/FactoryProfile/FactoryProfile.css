@@ -1,0 +1,293 @@
+.factory-profile-wrapper {
+  min-height: 100vh;
+  background: 
+    linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),
+    url('../../assets/f1.jpg') center/cover no-repeat fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  position: relative;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  overflow: hidden;
+}
+
+.profile-logo {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 2rem;
+  z-index: 10;
+  box-shadow: 
+    0 0 0 5px rgba(255, 255, 255, 0.1),
+    0 10px 30px rgba(0, 0, 0, 0.5),
+    inset 0 0 20px rgba(255, 255, 255, 0.2);
+  transform-style: preserve-3d;
+  animation: float 6s ease-in-out infinite;
+  filter: drop-shadow(0 5px 15px rgba(0, 0, 0, 0.3));
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0) rotateY(0deg); }
+  50% { transform: translateY(-20px) rotateY(10deg); }
+}
+
+.fixed-home-btn {
+  position: fixed;
+  bottom: 30px;
+  left: 30px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.447);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 100;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.fixed-home-btn:hover {
+  transform: scale(1.1) rotate(10deg);
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.factory-profile-glass-card {
+  background: rgba(255, 255, 255, 0.784);
+  backdrop-filter: blur(15px);
+  border-radius: 20px;
+  padding: 2.5rem;
+  width: 100%;
+  max-width: 600px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  position: relative;
+  overflow: hidden;
+  color: white;
+}
+
+.factory-profile-glass-card::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    to bottom right,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(255, 98, 98, 0) 50%,
+    rgba(6, 130, 124, 0) 100%
+  );
+  transform: rotate(30deg);
+  pointer-events: none;
+}
+
+.factory-profile-glass-card h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: black;
+  text-align: center;
+  font-weight: 600;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0);
+}
+
+h2 {
+  text-align: center;
+  font-size: px;
+  color: #2c3e50;
+  margin-bottom: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.factory-details {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 20px;
+  max-width: 500px;
+  margin: 0 auto 30px auto;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.factory-details p {
+  font-size: 16px;
+  color: #34495e;
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+  line-height: 1.5;
+  gap: 20px;
+  text-align: left;
+}
+
+.factory-details strong {
+  color: #2c3e50;
+  min-width: 150px; 
+  display: inline-block;
+  gap: 10px;
+}
+
+.factory-details p:nth-child(odd) {
+  background: #f8faff;
+  border-radius: 8px;
+  padding: 8px 12px;
+}
+
+.factory-details p:nth-child(even) {
+  background: #ffffff;
+  padding: 8px 12px;
+}
+
+.factory-details p:hover {
+  background: #ecf5ff;
+  transition: background 0.3s ease;
+}
+
+/* Button Group - Modern Layout */
+.order-btn-group {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.o-order-btn {
+  background: linear-gradient(135deg, #0331ff 0%, #400081 100%);
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+}
+
+.o-order-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+  background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+}
+
+.sub-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.update-btn.small,
+.delete-btn.small {
+  padding: 0.6rem 1.2rem;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  opacity: 0.9;
+}
+
+.update-btn.small {
+  background: rgb(6, 144, 55);
+  color: #ffffff;
+  border: 1px solid #005b26;
+}
+
+.delete-btn.small {
+  background: rgb(207, 2, 19);
+  color: #ffffff;
+  border: 1px solid #5b0008;
+}
+
+.update-btn.small:hover,
+.delete-btn.small:hover {
+  transform: translateY(-2px);
+  opacity: 1;
+}
+
+/* Common button base style */
+.order-btn-group button {
+  padding: 10px 18px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Pay Now Button */
+.pay-btn {
+  background: rgb(0, 0, 167);
+  color: white;
+}
+
+.pay-btn:hover {
+  background: linear-gradient(135deg, #1e7e34, #2fa860);
+  transform: scale(1.05);
+}
+
+/* Pending Button */
+.pending-btn {
+  background:rgb(0, 173, 200);
+  color: #333;
+  cursor: not-allowed;
+  opacity: 0.8;
+}
+
+.pending-btn:hover {
+  background: rgb(64, 137, 255);
+  transform: none;
+}
+
+.pending-btn:disabled {
+  box-shadow: none;
+  transform: none;
+}
+
+/* Cancel Order Button */
+.cancel-btn {
+  background: rgba(255, 25, 25, 0.781);
+  color: white;
+}
+
+.cancel-btn:hover:not(:disabled) {
+  background: linear-gradient(135deg, #a71d2a, #d63a48);
+  transform: scale(1.05);
+}
+
+.cancel-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .factory-profile-glass-card {
+    padding: 1.5rem;
+  }
+  
+  .factory-details p {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .factory-details strong {
+    margin-bottom: 0.3rem;
+  }
+}

@@ -1,0 +1,197 @@
+/* Background and container */
+.ev-profile-wrapper {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  min-height: 100vh;
+  background: url('../../assets/f6.jpeg') no-repeat center center/cover; /* Background image */
+  color: #f0f0f0;
+  padding: 0 1rem 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+/* Profile Logo */
+.profile-logo {
+  height: 100px;
+  width: 90px;
+  margin: 2rem 4rem;
+  user-select: none;
+}
+
+/* Fixed Home Button */
+.fixed-home-btn {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  background: #0f62fe;
+  border: none;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  font-size: 1.4rem;
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(15, 98, 254, 0.6);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  z-index: 1100;
+}
+
+.fixed-home-btn:hover {
+  background-color: #0043ce;
+  transform: scale(1.1);
+}
+
+/* Glass Card for Profile */
+.ev-profile-glass-card {
+  background: rgba(255, 255, 255, 0.68);
+  border-radius: 16px;
+  padding:2rem 2.5rem;
+  max-width: 900px;
+  width: 100%;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  text-align: center;
+  user-select: none;
+}
+
+/* Heading */
+.ev-profile-glass-card h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #031a23;
+  text-shadow: 0 0 6px #70b9e0;
+}
+
+/* Details Section */
+.ev-details {
+  text-align: left;
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
+  color: #020509;
+}
+
+.ev-details p {
+  margin: 0.6rem 0;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.ev-details strong {
+  color: #080f13;
+  min-width: 130px;
+  user-select: text;
+}
+
+/* Buttons Group */
+.ev-actions-btn-group {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.ev-update-btn,
+.EV-delete-btn {
+  padding: 0.1rem 1.1rem;
+  font-weight: 700;
+  border-radius: 8px;
+  width: 300px;
+  cursor: pointer;
+  border: none;
+  font-size: 1rem;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  user-select: none;
+  box-shadow: 0 4px 12px rgba(112, 185, 224, 0.5);
+}
+
+.ev-update-btn {
+  background-color: #0f62fe;
+  color: white;
+}
+
+.ev-update-btn:hover {
+  background-color: #0043ce;
+  box-shadow: 0 6px 18px rgba(0, 67, 206, 0.7);
+}
+
+.EV-delete-btn {
+  background-color: #d62828;
+  color: white;
+}
+
+.EV-delete-btn:hover {
+  background-color: #a62020;
+  box-shadow: 0 6px 18px rgba(166, 32, 32, 0.7);
+}
+
+.book-btn {
+  background-color: #0a8e0e;
+  color: white;
+  border: none;
+  width: 620px;
+  padding: 12px 18px;
+  margin-top: 10px;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.book-btn:hover {
+  background-color: #388e3c;
+}
+
+/* View My Appointments Button */
+.view-appointment-btn {
+  background-color: #da8300;
+  color: white;
+  border: none;
+  width: 620px;
+  padding: 12px 18px;
+  margin-top: 10px;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(255, 153, 0, 0.5);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
+  user-select: none;
+}
+
+.view-appointment-btn:hover {
+  background-color: #cc7a00;
+  box-shadow: 0 6px 18px rgba(204, 122, 0, 0.7);
+  transform: scale(1.05);
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+  .view-appointment-btn {
+    width: 90%;
+  }
+}
+
+
+
+/* Responsive */
+@media (max-width: 480px) {
+  .ev-profile-glass-card {
+    padding: 1.5rem 1.5rem;
+  }
+
+  .ev-details strong {
+    min-width: 100px;
+  }
+
+  .ev-actions-btn-group {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .ev-update-btn,
+  .EV-delete-btn {
+    width: 90%;
+  }
+}

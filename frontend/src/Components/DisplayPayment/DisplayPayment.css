@@ -1,0 +1,267 @@
+/* 
+   Filter Bar (Search Date)
+*/
+.d-filter-bar {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 25px;
+}
+
+.d-filter-bar label {
+  font-weight: 600;
+  color: #ffffff;
+  font-size: 1rem;
+}
+
+.d-filter-bar input {
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 1px solid #ffde59;
+  background: rgb(255, 255, 255);  
+  color: #000000;               
+  font-size: 0.95rem;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.d-filter-bar input::placeholder {
+  color: #cccccc;
+}
+
+.d-filter-bar input:focus {
+  border-color: #ff9800;
+  box-shadow: 0 0 8px #ff9800;
+}
+
+   /*
+   Back to Admin Button
+  */
+.d-back-to-admin-btn {
+  background: linear-gradient(135deg, #2196f3, #1769aa);
+  color: #fff;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 8px;
+  width: 300px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  transition: all 0.3s ease;
+}
+
+.d-back-to-admin-btn:hover {
+  background: linear-gradient(135deg, #1976d2, #0d47a1);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.5);
+}
+
+
+
+/* 
+   PDF Download Button
+   ========================= */
+.dis-fuel-download-pdf-btn {
+  background: rgb(0, 167, 67);
+  color: #fff;
+  padding: 10px 18px;
+  border: none;
+  width: 350px;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  transition: all 0.3s ease;
+}
+
+.dis-fuel-download-pdf-btn:hover {
+  background: rgb(215, 140, 0);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.5);
+}
+
+
+.d-payment-page-unique {
+  min-height: 100vh;
+  padding: 20px;
+  font-family: 'Poppins', sans-serif;
+  background: url('../../assets/f1.jpg') no-repeat center center/cover;
+  position: relative;
+  color: #fff;
+}
+
+/* Dark overlay for readability */
+.d-payment-page-unique::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.121);
+  z-index: 0;
+}
+
+/* Logo centered at top */
+.d-payment-header::before {
+  content: "";
+  display: block;
+  width: 100px;
+  border-radius: 50px;
+  height: 100px;
+  margin: 0 auto 10px auto;
+  background: url('../../assets/f2.png') no-repeat center/contain;
+}
+
+/* Header */
+.d-payment-header {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.d-payment-header h1 {
+  font-size: 2.2rem;
+  color: #ffffff;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+  margin-bottom: 15px;
+}
+
+.d-payment-header button {
+  margin: 5px;
+}
+
+/* Filter Bar */
+.d-filter-bar {
+  position: relative;
+  margin-right: 90rem;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 25px;
+}
+
+.d-filter-bar label {
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.d-filter-bar input {
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+}
+
+.d-clear-btn {
+  padding: 6px 12px;
+  background: #ff4d4d;
+  border: none;
+  border-radius: 6px;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.d-clear-btn:hover {
+  background: #e60000;
+}
+
+/* Payment list */
+.d-payments-list {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+  gap: 20px;
+  padding: 10px;
+  justify-content: center; /* center when few cards */
+}
+
+/* Payment entry card */
+.d-payment-entry {
+  background: rgba(255, 255, 255, 0.58);
+  border-radius: 15px;
+  padding: 20px;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.6);
+  transition: transform 0.3s, box-shadow 0.3s;
+  
+  width: 100%;       /* fill grid column */
+  max-width: 350px;  /* prevent oversize when only 1-2 cards */
+  margin: 0 auto;  
+}
+.d-payment-entry:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.8);
+}
+
+.d-payment-info div {
+  margin-bottom: 8px;
+  font-size: 1rem;
+  color: #000000;
+}
+
+.d-payment-info strong {
+  color: #282002;
+}
+
+/* Buttons */
+.d-payment-controls {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+.d-btn-update,
+.d-btn-delete,
+.d-back-to-admin-btn,
+.d-fuel-download-pdf-btn {
+  padding: 8px 14px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.d-btn-update {
+  background: #344bf6;
+  color: #fff;
+}
+.d-btn-update:hover {
+  background: #0b27f9;
+}
+
+.d-btn-delete {
+  background: #f44336;
+  color: #fff;
+}
+.d-btn-delete:hover {
+  background: #d32f2f;
+}
+
+.d-back-to-admin-btn {
+  background: #2196f3;
+  color: #fff;
+}
+.d-back-to-admin-btn:hover {
+  background: #1976d2;
+}
+
+
+/* No payments message */
+.d-no-payments-msg {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  font-size: 1.2rem;
+  color: #ffde59;
+}

@@ -1,0 +1,161 @@
+/* UpdateFactory.css */
+
+.update-factory-wrapper {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #74ebd500 0%, #9face600 100%), url('../../assets/f1.jpg');
+  background-size: cover;
+  background-position: center;
+  padding: 100px 20px 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  position: relative;
+}
+
+/* Logo styling */
+.profile-logo {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  object-fit: contain;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  animation: pulse 2.5s infinite ease-in-out;
+  margin-bottom: 30px;
+  cursor: default;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.07);
+    opacity: 0.9;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Glass card styling */
+.update-factory-glass-card {
+  background: rgba(255, 255, 255, 0.784);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(15px);
+  border-radius: 20px;
+  padding: 40px;
+  max-width: 600px;
+  width: 100%;
+  color: #000;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.3);
+  animation: slideIn 0.6s ease;
+}
+
+.update-factory-glass-card h2 {
+  font-size: 32px;
+  text-align: center;
+  margin-bottom: 30px;
+  font-weight: bold;
+  color: #000000;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+.update-factory-glass-card form > div {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.update-factory-glass-card label {
+  margin-bottom: 6px;
+  font-weight: 600;
+  color: #000000;
+  font-size: 16px;
+}
+
+.update-factory-glass-card input[type="text"],
+.update-factory-glass-card input[type="email"] {
+  padding: 12px 15px;
+  border: 1.8px solid #ccc;
+  border-radius: 10px;
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+}
+
+.update-factory-glass-card input[type="text"]:focus,
+.update-factory-glass-card input[type="email"]:focus {
+  border-color: #218838;
+  outline: none;
+  box-shadow: 0 0 8px rgba(33, 136, 56, 0.4);
+}
+
+.update-factory-glass-card button[type="submit"] {
+  width: 100%;
+  background-color: #005d16;
+  color: white;
+  font-size: 18px;
+  font-weight: 700;
+  padding: 14px 0;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin-top: 10px;
+}
+
+.update-factory-glass-card button[type="submit"]:hover {
+  background-color: #218838;
+  transform: scale(1.05);
+}
+
+/* Animation */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .update-factory-wrapper {
+    padding: 80px 20px 40px;
+  }
+
+  .profile-logo {
+    width: 75px;
+    height: 75px;
+    margin-bottom: 20px;
+  }
+
+  .update-factory-glass-card {
+    padding: 30px 20px;
+  }
+
+  .update-factory-glass-card h2 {
+    font-size: 26px;
+  }
+
+  .update-factory-glass-card label {
+    font-size: 14px;
+  }
+
+  .update-factory-glass-card input[type="text"],
+  .update-factory-glass-card input[type="email"] {
+    font-size: 14px;
+    padding: 10px 12px;
+  }
+
+  .update-factory-glass-card button[type="submit"] {
+    font-size: 16px;
+    padding: 12px 0;
+  }
+}

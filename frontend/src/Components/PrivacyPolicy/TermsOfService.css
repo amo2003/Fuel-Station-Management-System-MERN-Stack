@@ -1,0 +1,72 @@
+.tos-container {
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center; /* horizontal center */
+}
+
+.tos-overlay {
+  background: rgba(0, 0, 0, 0.65);
+  width: 100%;
+  min-height: 100vh;
+  padding: 50px 20px;
+  display: flex;
+  justify-content: center; /* horizontal center */
+  align-items: flex-start; /* align content to top */
+  overflow-y: auto; /* scroll if content exceeds viewport */
+}
+
+.tos-content {
+  max-width: 900px;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  color: #222;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.tos-logo {
+  display: block;
+  margin: 0 auto 20px;
+  height: 80px;
+}
+
+.tos-content h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #004aad;
+  margin-bottom: 20px;
+}
+
+.tos-content h2 {
+  margin-top: 25px;
+  font-size: 1.4rem;
+  color: #d97706;
+}
+
+.tos-content p {
+  line-height: 1.7;
+  margin-top: 10px;
+}
+
+.tos-content a {
+  color: #004aad;
+  text-decoration: underline;
+}
+
+.tos-content a:hover {
+  color: #ff6b00;
+}
+
+/* Scrollbar styling for better UX */
+.tos-overlay::-webkit-scrollbar {
+  width: 8px;
+}
+
+.tos-overlay::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+}

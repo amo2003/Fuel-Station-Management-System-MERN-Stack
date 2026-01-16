@@ -1,0 +1,125 @@
+/* src/pages/EVDetails.css */
+.ev-details-wrapper {
+  background-image: url('../../assets/f1.jpg'); /* Add your background image in assets */
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  padding: 20px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.ev-navbar {
+  background-color: rgb(11, 2, 113);
+  padding: 12px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
+
+.ev-navbar .nav-logo {
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.ev-navbar .nav-links a {
+  color: #fff;
+  margin-left: 18px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.ev-navbar .nav-links a:hover {
+  color: #00ffff;
+}
+
+.ev-logo {
+  display: block;
+  margin: 0 auto 20px;
+  margin-top: 80px;
+  width: 120px;
+  height: auto;
+}
+
+.ev-container {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 30px;
+  border-radius: 18px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+  max-width: 1200px;
+  margin: auto;
+}
+
+.ev-container h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #333;
+}
+
+.ev-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.ev-table th,
+.ev-table td {
+  padding: 12px 14px;
+  border: 1px solid #ccc;
+  text-align: center;
+}
+
+.ev-table th {
+  background-color: #002c5c;
+  color: #fff;
+}
+
+.ev-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.ev-table tr:hover {
+  background-color: #eef;
+}
+
+.ev-view-btn {
+  background-color: #00634f;
+  border: none;
+  color: white;
+  padding: 8px 14px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.ev-view-btn:hover {
+  background-color: #019875;
+}
+
+/* EVDetails.css */
+
+.ev-search-bar {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.ev-search-input {
+  padding: 10px 15px;
+  width: 280px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.ev-search-input:focus {
+  border-color: #0077cc;
+  box-shadow: 0 0 5px rgba(0, 119, 204, 0.3);
+}
+

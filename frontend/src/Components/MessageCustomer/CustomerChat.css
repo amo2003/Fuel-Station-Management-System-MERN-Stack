@@ -1,0 +1,214 @@
+.cus-chat-page {
+  min-height: 100vh;
+  background-image: url('../../assets/f1.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed; 
+  display: flex;
+  flex-direction: column;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.cus-chat-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(19, 0, 116);
+  padding: 10px 20px;
+  color: white;
+  height: 80px;
+  z-index: 2;
+}
+
+.cus-chat-logo {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.cus-chat-nav-links {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+  margin: 0;
+  padding: 0;
+}
+
+.cus-chat-nav-links li {
+  display: inline;
+}
+
+.cus-chat-nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease-in-out;
+}
+
+.cus-chat-nav-links a:hover {
+  color: #dce6f0;
+}
+
+.cus-chat-container {
+  display: flex;
+  flex-direction: column;
+  width: 600px;
+  margin: 20px auto;
+  height: 80vh; 
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  background-color: rgba(255, 255, 255, 0.85);
+  z-index: 1;
+  backdrop-filter: blur(3px);
+  position: relative;
+}
+
+.cus-chat-container h2 {
+  background-color: #010056;
+  color: white;
+  margin: 0;
+  padding: 15px;
+  text-align: center;
+  font-size: 1.2rem;
+  border-radius: 0;
+}
+
+.cus-chat-messages {
+  flex: 1;
+  padding: 15px;
+  overflow-y: auto; 
+  scroll-behavior: smooth;
+}
+
+/* Header section with logo + welcome note */
+.cus-chat-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 25px;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.cus-chat-logo-img {
+  width: 80px;
+  height: 80px;
+  border-radius: 40px;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+.cus-chat-welcome {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #fff;
+  background: rgba(0,0,0,0.5);
+  padding: 8px 15px;
+  border-radius: 20px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+
+.my-msg, .other-msg {
+  margin-bottom: 15px;
+  padding: 10px 15px;
+  border-radius: 18px;
+  max-width: 70%;
+  word-wrap: break-word;
+  line-height: 1.4;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.my-msg {
+  background-color: #00499d;
+  color: white;
+  margin-left: auto;
+  border-bottom-right-radius: 4px;
+}
+
+.other-msg {
+  background-color: #ffffff;
+  color: #333;
+  margin-right: auto;
+  border-bottom-left-radius: 4px;
+  border: 1px solid #e0e0e0;
+}
+
+.my-msg b, .other-msg b {
+  display: block;
+  margin-bottom: 3px;
+  font-size: 0.8rem;
+  opacity: 0.9;
+}
+
+.cus-chat-input {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  gap: 10px;
+}
+
+.cus-chat-input input {
+  flex: 1;
+  width: 100rem;
+  padding: 10px 15px;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  outline: none;
+  font-size: 1rem;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.cus-chat-input input:focus {
+  border-color: #4a76a8;
+  background-color: white;
+}
+
+.cus-chat-input button {
+  padding: 10px 20px;
+  background-color: #009721;
+  color: white;
+  width: 100px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.2s;
+}
+
+.cus-chat-input button:hover {
+  background-color: #3a6690;
+  transform: translateY(-1px);
+}
+
+.cus-chat-input button:active {
+  transform: translateY(0);
+}
+
+/* Scrollbar styling */
+.cus-chat-messages::-webkit-scrollbar {
+  width: 6px;
+}
+
+.cus-chat-messages::-webkit-scrollbar-track {
+  background: rgba(241, 241, 241, 0.5);
+}
+
+.cus-chat-messages::-webkit-scrollbar-thumb {
+  background: rgba(193, 193, 193, 0.7);
+  border-radius: 3px;
+}
+
+.cus-chat-messages::-webkit-scrollbar-thumb:hover {
+  background: rgba(168, 168, 168, 0.9);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.my-msg, .other-msg {
+  animation: fadeIn 0.3s ease-out;
+}

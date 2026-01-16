@@ -1,0 +1,126 @@
+/* BulkPaymentSlip.css */
+/* ✅ Scoped only for BulkPaymentSlip */
+
+.b-bulk-payment-container {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: "Poppins", sans-serif;
+  background: url("../../assets/f1.jpg") no-repeat center center/cover;
+  overflow: hidden;
+}
+
+/* Navbar */
+.b-bulk-payment-navbar {
+  background: rgb(0, 40, 142);
+  color: #fff;
+  font-size: 1.3rem;
+  height: 5rem;
+  font-weight: 600;
+  padding: 15px 25px;
+  text-align: left;
+  letter-spacing: 1px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
+}
+
+/* Overlay to darken background for readability */
+.b-bulk-payment-overlay {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+  background: rgba(0, 0, 0, 0.55);
+}
+
+/* ✅ Centered logo at top */
+.b-bulk-payment-logo {
+  width: 130px;
+  height: auto;
+  margin: 0 auto 25px auto;
+  display: block;
+  border-radius: 50%;
+  background: #fff;
+  padding: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+/* Payment Card */
+.b-bulk-payment-card {
+  background: #ffffff;
+  border-radius: 15px;
+  padding: 25px 30px;
+  width: 100%;
+  max-width: 500px;
+  text-align: center;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.35);
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+.b-bulk-payment-card h2 {
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.b-bulk-payment-card p {
+  margin: 6px 0;
+  color: #444;
+  font-size: 1rem;
+}
+
+/* Form Styles */
+.b-payment-form {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.b-payment-form label, .b-payment-form select {
+  text-align: left;
+  font-weight: 600;
+  color: #222;
+  font-size: 0.95rem;
+}
+
+.b-payment-form input, .b-payment-form select {
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  font-size: 1rem;
+  transition: border 0.3s ease;
+}
+
+.b-payment-form input:focus {
+  border-color: #0066cc;
+}
+
+.b-payment-form select:focus {
+  border-color: #0066cc;
+}
+
+/* Button */
+.b-payment-form button {
+  background: #0066cc;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 12px;
+  font-size: 1rem;
+  font-weight: 600;
+  margin-top: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.b-payment-form button:hover {
+  background: #004d99;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}

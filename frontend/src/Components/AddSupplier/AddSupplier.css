@@ -1,0 +1,117 @@
+/* Background */
+.add-supplier-page {
+  min-height: 100vh;
+  background: url("../../assets/f1.jpg") no-repeat center center/cover; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Navbar */
+.add-supplier-navbar {
+  width: 100%;
+  height: 90px;
+  padding: 15px 40px;
+  background: rgb(0, 4, 120);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.add-supplier-navbar h1 {
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.add-supplier-navbar .nav-links a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.add-supplier-navbar .nav-links a:hover,
+.add-supplier-navbar .nav-links .active {
+  color: #ffcc00;
+}
+
+/* Logo */
+.add-supplier-logo {
+  margin-top: 30px;
+}
+
+.add-supplier-logo img {
+  width: 120px;
+  height: auto;
+  border-radius: 50%;
+  background: white;
+  padding: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Form container */
+.add-supplier-form-container {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 30px;
+  border-radius: 12px;
+  margin-top: 20px;
+  width: 450px;
+  text-align: center;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.add-supplier-form-container h2 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Inputs */
+.add-supplier-form-container input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 0.95rem;
+  transition: border 0.3s;
+}
+
+.add-supplier-form-container input:focus {
+  border: 1px solid #ffcc00;
+  outline: none;
+}
+
+/* Button */
+.add-supplier-form-container button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  background: #000fb5;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.add-supplier-form-container button:hover {
+  background: #0e6bff;
+}
+
+/* Back link */
+.add-supplier-form-container .back-link {
+  display: inline-block;
+  margin-top: 95px;
+  color: #333;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.add-supplier-form-container .back-link:hover {
+  color: #ff6600;
+}

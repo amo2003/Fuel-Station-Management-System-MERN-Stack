@@ -1,0 +1,70 @@
+.payment-details-page {
+  min-height: 100vh;
+  background: linear-gradient(rgba(10, 20, 60, 0), rgba(10, 20, 60, 0)),
+    url('../../assets/f1.jpg') no-repeat center center fixed;
+  background-size: cover;
+  padding: 30px 20px;
+  font-family: 'Segoe UI', sans-serif;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.payment-details-page h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #000000;
+}
+
+.details-back-link {
+  margin-top: 8px;
+  margin-bottom: 20px;
+  color: #020626;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 16px;
+  transition: color 0.3s;
+  background-color: rgba(255, 255, 255, 0.447);
+  padding: 8px 16px;
+  border-radius: 8px;
+}
+
+.details-back-link:hover {
+  color: #facc15;
+  background-color: rgba(17, 4, 4, 0.507);
+}
+
+/* Payment Card */
+.payment-details-card {
+  background-color: rgba(255, 255, 255, 0.95);
+  color: #001f7a;
+  max-width: 500px;
+  width: 100%;
+  padding: 25px 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.3);
+  animation: fadeIn 0.5s ease-in;
+  text-align: left;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.payment-logo {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.05); opacity: 0.9; }
+  100% { transform: scale(1); opacity: 1; }
+}

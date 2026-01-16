@@ -1,0 +1,129 @@
+.ev-register-page {
+  font-family: Arial, sans-serif;
+  background-image: url('../../assets/f1.jpg'); 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  padding-top: 100px; 
+  backdrop-filter: blur(2px);
+}
+
+.ev-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 80px;
+  background-color: rgba(13, 59, 102, 0.95);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.ev-navbar-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.ev-navbar-logo img {
+  height: 60px;
+  width: 60px;
+  border-radius: 30px;
+}
+
+.ev-navbar-links a {
+  color: white;
+  text-decoration: none;
+  margin-left: 1.5rem;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.ev-navbar-links a:hover {
+  color: #aad9ff;
+}
+
+.ev-register-container {
+  background-color: rgba(255, 255, 255, 0.95);
+  max-width: 600px;
+  margin: auto;
+  margin-top: 50px;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.ev-form-header {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.ev-logo {
+  height: 60px;
+  width: 60px;
+  margin-bottom: 1rem;
+  border-radius: 30px;
+}
+
+.ev-form-title {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #0d3b66;
+}
+
+.ev-register-form .form-group {
+  margin-bottom: 1rem;
+}
+
+.ev-register-form label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.ev-register-form input,
+.ev-register-form select {
+  width: 100%;
+  padding: 0.6rem 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.ev-submit-btn {
+  background-color: #0d3b66;
+  color: white;
+  padding: 0.7rem;
+  width: 100%;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.ev-submit-btn:hover {
+  background-color: #0955a3;
+}
+
+.ev-login-link {
+  margin-top: 1rem;
+  text-align: center;
+  font-size: 14px;
+}
+
+.ev-login-link a {
+  color: #0d3b66;
+  text-decoration: none;
+}
+
+.ev-login-link a:hover {
+  text-decoration: underline;
+}

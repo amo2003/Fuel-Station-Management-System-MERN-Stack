@@ -1,0 +1,152 @@
+.all-factories-wrapper {
+  background-image: url('../../assets/f1.jpg'); /* ✅ Update path as needed */
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  padding: 50px 20px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.factory-logo {
+  display: block;
+  margin: 0 auto 20px auto;
+  margin-top: 60px;
+  width: 100px;
+  height: auto;
+  border-radius: 50px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.factory-profile-navbar {
+  background-color: rgba(13, 59, 102, 0.95);
+  padding: 1rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  z-index: 1000;
+  border-radius: 12px 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+.factory-profile-navbar .nav-logo {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.factory-profile-navbar .nav-logo:hover {
+  color: #f1c40f;
+}
+
+.factory-profile-navbar .nav-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.factory-profile-navbar .nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.factory-profile-navbar .nav-links a:hover {
+  color: #1abc9c;
+  text-decoration: underline;
+}
+
+
+
+.all-factories-container {
+  background-color: rgba(255, 255, 255, 0.92);
+  border-radius: 12px;
+  padding: 30px;
+  width: 1400px;
+  margin: auto;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+.all-factories-container h2 {
+  text-align: center;
+  color: #24405c;
+  margin-bottom: 25px;
+  font-size: 28px;
+}
+
+.all-factories-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 16px;
+}
+
+.all-factories-table th,
+.all-factories-table td {
+  padding: 12px 14px;
+  border: 1px solid #ccc;
+  text-align: center;
+}
+
+.all-factories-table th {
+  background-color: #34495e;
+  color: #fff;
+}
+
+.all-factories-table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.factory-search-input {
+  width: 60%;
+  padding: 10px 15px;
+  margin: 20px auto;
+  display: block;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  outline: none;
+  transition: 0.3s ease-in-out;
+}
+
+.factory-search-input:focus {
+  border-color: #0d3b66;
+  box-shadow: 0 0 5px rgba(13, 59, 102, 0.5);
+}
+
+
+.factory-action-btn {
+  padding: 6px 12px;
+  margin: 0 4px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.2s ease;
+}
+
+.view-btn {
+  background-color: #3498db;
+  color: white;
+}
+
+.update-btn {
+  background-color: #f39c12;
+  color: white;
+}
+
+.delete-btn {
+  background-color: #e74c3c;
+  color: white;
+}
+
+.factory-action-btn:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}

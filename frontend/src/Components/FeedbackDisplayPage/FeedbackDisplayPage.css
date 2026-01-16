@@ -1,0 +1,162 @@
+.feedbacklist-display-page {
+  min-height: 100vh;
+  background: url('../../assets/f1.jpg') no-repeat center center fixed;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  padding-top: 100px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Navbar */
+.feedbacklist-display-navbar {
+   width: 100%;
+  height: 70px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 18, 135, 0.9);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 50px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+}
+
+.feedbacklist-display-navbar .feedbacknav-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.feedbacklist-display-navbar .feedbacknav-links a {
+  margin-left: 25px;
+  text-decoration: none;
+  color: #000000;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.feedbacklist-display-navbar .nav-links a:hover {
+  color: #007bff;
+}
+
+
+.feedbacklist-filters {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.feedbacklist-filters input {
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #000000;
+  outline: none;
+  font-size: 1rem;
+}
+.feedbacklist-filters select{
+ padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #000000;
+  outline: none;
+  font-size: 1rem;
+}
+
+
+.feedbacklist-filters button {
+  padding: 10px 15px;
+  border-radius: 8px;
+  border: none;
+  background: #ff4d4d;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.feedbacklist-filters button:hover {
+  background: #cc0000;
+}
+
+.feedbacklist-cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 0 20px;
+}
+
+.feedbacklist-card {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 20px;
+  padding: 20px 25px;
+  max-width: 300px;
+  width: 100%;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.feedbacklist-card h3 {
+  margin: 0;
+  color: #007bff;
+}
+
+.feedbacklist-card p {
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+.feedbacklist-card .feedback-date {
+  font-size: 0.85rem;
+  color: #555;
+}
+
+.feed-delete-btn {
+  margin-top: 10px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: none;
+  background: #ff4d4d;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.feed-delete-btn:hover {
+  background: #cc0000;
+}
+
+.feed-clear{
+  margin-left: 10px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: none;
+  background: #007bff;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.no-feedbacklist-msg {
+  text-align: center;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+@media (max-width: 600px) {
+  .feedback-filters {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .feedbacklist-card {
+    max-width: 90%;
+  }
+}

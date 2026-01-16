@@ -1,0 +1,95 @@
+/* UpdateSale.css */
+
+.update-sale-page {
+  min-height: 100vh;
+  background-image: url('../../assets/f1.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+  box-sizing: border-box;
+  color: #fff;
+}
+
+.update-sale-content {
+  background: rgba(0, 0, 0, 0.7);
+  padding: 40px 40px 30px;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6);
+  max-width: 500px;
+  width: 100%;
+  backdrop-filter: blur(6px);
+  text-align: center;
+}
+
+.update-logo {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  margin-bottom: 10px;
+  border-radius: 50%;
+  box-shadow: 0 0 10px #fff;
+}
+
+.update-sale-content h2 {
+  font-size: 28px;
+  margin-bottom: 25px;
+  color: #fff;
+}
+
+.update-sale-form {
+  text-align: left;
+}
+
+.update-sale-form label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #ffffff;
+  margin-top: 15px;
+}
+
+.update-sale-form input,
+.update-sale-form select {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  background: #f1f1f1;
+  color: #333;
+  font-size: 16px;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+}
+
+.update-sale-form input:focus {
+  outline: none;
+  background: #fff;
+  box-shadow: 0 0 5px #ff6b00;
+}
+
+.update-sale-form select:focus {
+  outline: none;
+  background: #fff;
+  box-shadow: 0 0 5px #ff6b00;
+}
+
+.update-sale-form button {
+  width: 100%;
+  padding: 12px;
+  background: #ff6b00;
+  border: none;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: background 0.3s ease;
+}
+
+.update-sale-form button:hover {
+  background: #e65c00;
+}

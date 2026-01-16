@@ -1,0 +1,170 @@
+/* ===== Page Background ===== */
+.record-sale-page {
+  background-image: url('../../assets/f1.jpg'); /* Replace with your background image path */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  font-family: 'Segoe UI', sans-serif;
+  color: white;
+  position: relative;
+  padding-bottom: 40px;
+}
+
+/* ===== Centered Background Logo ===== */
+.record-sale-page::before {
+  content: "";
+  background-size: 150px;
+  background-repeat: no-repeat;
+  background-position: top center;
+  opacity: 0.06;
+  position: absolute;
+  top: 20px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ===== Navbar ===== */
+.record-navbar {
+  background-color: rgb(0, 27, 101);
+  padding: 15px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+}
+
+
+.nav-left {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.record-logo {
+  width: 45px;
+  height: 45px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 0 10px #fff;
+}
+
+.brand-name {
+  font-size: 22px;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+/* Navbar links */
+.nav-right a {
+  color: #ccc;
+  margin-left: 25px;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  transition: color 0.2s ease-in-out;
+}
+
+.nav-right a:hover {
+  color: #fff;
+}
+
+/* ===== Content Container ===== */
+.record-content {
+  max-width: 600px;
+  max-height: 800px;
+  margin: 80px auto 40px auto;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 50px 50px;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.153);
+  backdrop-filter: blur(6px);
+  position: relative;
+  z-index: 2;
+}
+
+/* ===== Heading ===== */
+.record-content h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #ffffff;
+  font-size: 26px;
+}
+
+/* ===== Form Styling ===== */
+.sale-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.sale-form label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.sale-form input,
+.sale-form select {
+  padding: 10px;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+  font-size: 15px;
+  background: #f0f0f0;
+  color: #000;
+}
+
+.sale-form input:focus,
+.sale-form select:focus {
+  box-shadow: 0 0 5px #00c0ff;
+}
+
+/* ===== Submit Button ===== */
+.sale-form button[type="submit"] {
+  background-color: #ff6600;
+  color: white;
+  border: none;
+  padding: 12px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 8px;
+  width: 230px;
+  display: block;           /* Needed for margin auto to work */
+  margin: 10px auto 0;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.sale-form button[type="submit"]:hover {
+  background-color: #e65c00;
+}
+
+/* Centered logo styling */
+.record-logo {
+  display: block;           /* ensures it behaves like a block element */
+  margin: 0 auto;           /* centers horizontally */
+  width: 100px;             /* set desired width */
+  height: 100px;            /* set desired height */
+  object-fit: contain;      /* keeps aspect ratio */
+  border-radius: 50%;       /* makes it circular */
+  box-shadow: 0 0 12px #fff;
+  margin-top: 20px;         /* spacing from top */
+}
+
+.record-logo {
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.05); opacity: 0.9; }
+  100% { transform: scale(1); opacity: 1; }
+}
+

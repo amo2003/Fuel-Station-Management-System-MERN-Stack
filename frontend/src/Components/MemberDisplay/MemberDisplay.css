@@ -1,0 +1,235 @@
+.member-display-root {
+  min-height: 100vh;
+  background: linear-gradient(rgba(0, 0, 30, 0.5), rgba(0, 0, 30, 0.5)),
+    url('../../assets/f1.jpg') no-repeat center center fixed;
+  background-size: cover;
+  padding: 30px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.payment-navbar {
+  background-color: rgba(0, 17, 100, 0.9);
+  color: white;
+  padding: 12px 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 10px;
+  margin-bottom: 25px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+.payment-navbar .logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.payment-navbar .nav-links {
+  display: flex;
+  gap: 18px;
+}
+
+.payment-navbar .nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.payment-navbar .nav-links a:hover {
+  color: #facc15;
+}
+
+.header-with-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.staff-logo {
+  width: 65px;
+  height: 65px;
+  margin-bottom: 12px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  animation: pulse 2.5s infinite ease-in-out;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.06); opacity: 0.88; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+.payment-container {
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(14px);
+  border-radius: 18px;
+  padding: 30px;
+  color: #fff;
+  box-shadow: 0 6px 28px rgba(0, 0, 0, 0.3);
+}
+
+.payment-container h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  font-weight: 700;
+  font-size: 2rem;
+  color: #ffffff;
+}
+
+.search-input {
+  display: block;
+  margin: 0 auto 25px;
+  padding: 10px 16px;
+  width: 95%;
+  max-width: 500px;
+  border-radius: 10px;
+  border: none;
+  font-size: 16px;
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+}
+
+.table-wrapper {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: rgba(255, 255, 255, 0.95);
+  border-radius: 12px;
+  overflow: hidden;
+  color: #000;
+  font-size: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+th, td {
+  padding: 12px 14px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background-color: #1e40af;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+tr:nth-child(even) {
+  background-color: #f3f4f6;
+}
+
+tr:hover {
+  background-color: #e0e7ff;
+}
+
+.actions-cell {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.edit-btn,
+.delete-btn {
+  padding: 6px 12px;
+  font-size: 14px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.edit-btn {
+  background-color: #2563eb;
+  color: #003b14;
+}
+
+.edit-btn:hover {
+  background-color: #00114a;
+}
+
+.delete-btn {
+  background-color: #dc2626;
+  color: #fff;
+}
+
+.delete-btn:hover {
+  background-color: #b91c1c;
+}
+
+.btn-style-glass {
+  padding: 8px 16px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: rgba(126, 0, 0, 0.907);
+  color: #ffffff;
+  font-weight: 500;
+  border-radius: 8px;
+  backdrop-filter: blur(10px);
+  transition: 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.btn-style-glass:hover {
+  background: rgba(246, 0, 0, 0.792);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.1);
+}
+
+.btn-style-outline {
+  background: green;
+  border: 2px solid #fff;
+  color: #fff;
+  font-weight: 600;
+  padding: 7px 14px;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.btn-style-outline:hover {
+  background-color: #ffffff22;
+  border-color: #facc15;
+  color: #6d5800;
+}
+
+.no-records {
+  text-align: center;
+  padding: 20px;
+  font-style: italic;
+  color: #c90000;
+}
+
+.member-btn-style-glass {
+  background: rgb(10, 37, 117);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: #ffffff;
+  padding: 8px 16px;
+  margin: 8px 0;
+  width: 500px;
+  font-size: 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease, border-color 0.3s ease;
+}
+
+.member-btn-style-glass:hover {
+  background: rgba(255, 255, 255, 0.3);
+  border-color: rgba(255, 255, 255, 0.6);
+}
+
+.memeber-download-pdf-container {
+  text-align: center;
+  margin: 12px 0;
+}
+
+
+

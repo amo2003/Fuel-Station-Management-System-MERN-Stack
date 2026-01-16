@@ -1,0 +1,116 @@
+.ev-rating-page {
+  background-image: url("../../assets/f1.jpg");
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  padding-top: 100px;
+  position: relative;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.ev-rating-logo {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  margin-top: 100px;
+  transform: translateX(-50%);
+  width: 100px;
+  height: auto;
+  border-radius: 30px;
+}
+
+.ev-rating-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 80px;
+  background-color: rgba(0, 7, 104, 0.95);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.ev-rating-navbar .nav-link {
+ color: white;
+  text-decoration: none;
+  margin-left: 1.5rem;
+  font-weight: 500;
+  font-size: 20px;
+  transition: color 0.3s ease;
+}
+
+.ev-rating-navbar .nav-link:hover {
+  color: #aad9ff;
+}
+
+
+.rating-list-container {
+  background-color: rgba(255, 255, 255, 0.95);
+  border-radius: 12px;
+  max-width: 800px;
+  margin: auto;
+  margin-top: 170px;
+  padding: 2rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.rating-list-container h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+.rating-search-bar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 1.2rem;
+  justify-content: center;
+}
+
+.rating-search-bar input {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+}
+
+.rating-search-icon {
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.rating-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.rating-table th,
+.rating-table td {
+  padding: 12px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+.rating-table th {
+  background-color: #007bff;
+  color: white;
+}
+
+.rating-delete-btn {
+  background-color: #dc3545;
+  border: none;
+  color: white;
+  padding: 6px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.rating-delete-btn:hover {
+  background-color: #c82333;
+}
+

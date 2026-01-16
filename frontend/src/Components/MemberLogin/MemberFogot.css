@@ -1,0 +1,91 @@
+.forgot-password-page {
+  font-family: 'Segoe UI', sans-serif;
+  background: #f9f9f9;
+  min-height: 100vh;
+}
+
+.factory-login-navbar {
+  background-color: #003366;
+  color: white;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-logo {
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+}
+
+.nav-links a {
+  color: white;
+  margin-left: 20px;
+  text-decoration: none;
+}
+
+.forgot-password-container {
+  max-width: 450px;
+  margin: 40px auto;
+  padding: 30px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.form-header {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.station-logo {
+  width: 80px;
+  margin-bottom: 10px;
+}
+
+.form-title {
+  font-size: 28px;
+  margin-bottom: 5px;
+}
+
+.form-subtitle {
+  color: #777;
+  font-size: 16px;
+}
+
+.forgot-password-form .form-group {
+  margin-bottom: 20px;
+}
+
+.forgot-password-form label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 500;
+}
+
+.forgot-password-form input {
+  width: 100%;
+  padding: 10px 14px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 12px;
+  background-color: #0066cc;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.submit-btn:hover {
+  background-color: #004d99;
+}

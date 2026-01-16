@@ -1,0 +1,103 @@
+/* Unique wrapper to isolate styling */
+.update-member-page {
+  min-height: 100vh;
+  background: url('../../assets/f1.jpg') no-repeat center center fixed;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.update-member-form .form-group {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.update-member-form label {
+  margin-bottom: 6px;
+  font-weight: bold;
+  color: #000;
+}
+
+
+/* Dark overlay */
+.update-member-page::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 50, 0.3);
+  z-index: 0;
+}
+
+/* Main container */
+.update-member-container {
+  position: relative;
+  z-index: 1;
+  background: rgba(180, 180, 255, 0.9);
+  padding: 40px 50px;
+  border-radius: 15px;
+  max-width: 600px;
+  margin-top: 40px;
+  width: 90%;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+  text-align: center;
+}
+
+/* Logo */
+.update-member-logo {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 20px;
+  border-radius: 50%;
+  background-color: #fff;
+  padding: 6px;
+  object-fit: contain;
+}
+
+/* Title */
+.update-member-container h2 {
+  margin-bottom: 25px;
+  color: #001f7a;
+  font-size: 1.6rem;
+}
+
+/* Form styles */
+.update-member-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.update-member-form input {
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #aaa;
+  background: rgba(255, 255, 255, 0.95);
+  font-size: 15px;
+}
+
+.update-member-form input:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 6px rgba(0, 123, 255, 0.4);
+}
+
+/* Submit button */
+.update-member-form button {
+  margin-top: 10px;
+  padding: 12px;
+  background-color: #004aad;
+  color: #fff;
+  font-size: 17px;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.update-member-form button:hover {
+  background-color: #005fff;
+}

@@ -1,0 +1,135 @@
+/* AdminPayments.css */
+.a-admin-payment-page {
+  font-family: Arial, sans-serif;
+  min-height: 100vh;
+  background-image: url('../../assets/f1.jpg'); /* background image */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 2rem 1rem;
+}
+
+/* Navbar */
+.a-admin-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  background-color: rgb(13, 59, 102);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+  z-index: 1000;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+.a-nav-logo {
+  font-weight: bold;
+  color: white;
+  font-size: 1.2rem;
+  text-decoration: none;
+}
+
+.a-nav-links a {
+  margin-left: 1.5rem;
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.a-nav-links a:hover {
+  color: #f4d35e;
+}
+
+/* Logo */
+.a-admin-logo {
+  display: block;
+  width: 120px;
+  height: auto;
+  margin: 100px auto 20px auto; /* leave space for fixed navbar */
+  border-radius: 50%;
+  background: #fff;
+  padding: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+/* Card container */
+.a-admin-card {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 12px;
+  padding: 25px;
+  max-width: 1500px;
+  margin: 0 auto 40px auto;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+}
+
+/* Table */
+.a-admin-payment-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  table-layout: fixed; /* ensures columns are equal width */
+}
+
+.a-admin-payment-table th,
+.a-admin-payment-table td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center; /* center content */
+  vertical-align: middle; /* vertically center */
+  font-size: 0.95rem;
+  word-wrap: break-word; /* handle long text */
+}
+
+.a-admin-payment-table th {
+  background: #0d3b66;
+  color: #fff;
+}
+
+.a-admin-payment-table tr:nth-child(even) {
+  background: #f9f9f9;
+}
+
+.a-admin-payment-table tr:hover {
+  background: #e6f3ff;
+}
+
+/* Delete button */
+.a-delete-btn {
+  padding: 5px 12px;
+  background-color: #ff4d4d;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background 0.3s ease;
+}
+
+.a-delete-btn:hover {
+  background-color: #cc0000;
+}
+
+/* Date Search Bar */
+.a-search-bar {
+  margin: 15px 0 20px 0;
+  display: flex;
+  width: 350px;
+  align-items: center;
+  gap: 10px;
+}
+
+.a-search-bar label {
+  font-weight: bold;
+  color: #0d3b66;
+}
+
+.a-search-bar input[type="date"] {
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
