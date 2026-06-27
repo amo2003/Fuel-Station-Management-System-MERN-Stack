@@ -15,6 +15,7 @@ function HomeNav() {
 
       {/* Desktop links */}
       <ul className="navbar-links desktop-links">
+        <li><Link to="/admin">Dashboard</Link></li>
         <li><Link to="/fuel-levels">Live Fuel Level</Link></li>
         <li><Link to="/evlog">Charge Your EV</Link></li>
         <li><Link to="/flogin">Place Fuel Order</Link></li>
