@@ -15,7 +15,7 @@ function DisplayPayment() {
   useEffect(() => {
     async function fetchPayments() {
       try {
-        const res = await axios.get('http://localhost:5000/fuelpayments');
+        const res = await axios.get('https://eac34b48-2a45-4b11-86c9-a129e031408d-prod.e1-us-east-azure.choreoapis.dev/fuel/backend/v1.0/fuelpayments');
         setPayments(res.data.payments);
         setFilteredPayments(res.data.payments);
       } catch (err) {
@@ -40,7 +40,7 @@ function DisplayPayment() {
   const handleDelete = async (id) => {
     if (window.confirm('Are you sure you want to delete this payment?')) {
       try {
-        await axios.delete(`http://localhost:5000/fuelpayments/${id}`);
+        await axios.delete(`https://eac34b48-2a45-4b11-86c9-a129e031408d-prod.e1-us-east-azure.choreoapis.dev/fuel/backend/v1.0/fuelpayments/${id}`);
         const updatedPayments = payments.filter(payment => payment._id !== id);
         setPayments(updatedPayments);
         setFilteredPayments(updatedPayments.filter(p => {

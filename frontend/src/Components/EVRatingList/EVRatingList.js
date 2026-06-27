@@ -15,7 +15,7 @@ const EVRatingList = () => {
 
   const fetchRatings = async () => {
     try {
-      const response = await axios.get("http://localhost:5000/rating/all");
+      const response = await axios.get("https://eac34b48-2a45-4b11-86c9-a129e031408d-prod.e1-us-east-azure.choreoapis.dev/fuel/backend/v1.0/rating/all");
       setRatings(response.data);
     } catch (error) {
       alert("Failed to fetch ratings");
@@ -24,7 +24,7 @@ const EVRatingList = () => {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`http://localhost:5000/rating/delete/${id}`);
+      await axios.delete(`https://eac34b48-2a45-4b11-86c9-a129e031408d-prod.e1-us-east-azure.choreoapis.dev/fuel/backend/v1.0/rating/delete/${id}`);
       setRatings(ratings.filter((r) => r._id !== id));
       alert("Delete success");
     } catch (error) {

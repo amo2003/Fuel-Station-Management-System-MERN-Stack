@@ -20,7 +20,7 @@ function RecordSale() {
 
   // Fetch fuel types
   useEffect(() => {
-    axios.get("http://localhost:5000/stocks/fuelLevels")
+    axios.get("https://eac34b48-2a45-4b11-86c9-a129e031408d-prod.e1-us-east-azure.choreoapis.dev/fuel/backend/v1.0/stocks/fuelLevels")
       .then(res => {
         const fuelTypes = res.data.storage.map(item => item.type);
         setTypes(fuelTypes);
@@ -30,7 +30,7 @@ function RecordSale() {
 
   // Fetch staff members
   useEffect(() => {
-    axios.get("http://localhost:5000/Members")
+    axios.get("https://eac34b48-2a45-4b11-86c9-a129e031408d-prod.e1-us-east-azure.choreoapis.dev/fuel/backend/v1.0/Members")
       .then(res => setMembers(res.data.members || []))
       .catch(err => console.error("Error fetching members", err));
   }, []);
@@ -54,7 +54,7 @@ function RecordSale() {
     }
 
     try {
-      const res = await axios.post("http://localhost:5000/sales", form);
+      const res = await axios.post("https://eac34b48-2a45-4b11-86c9-a129e031408d-prod.e1-us-east-azure.choreoapis.dev/fuel/backend/v1.0/sales", form);
       console.log("Sale response:", res.data);
       alert("Sale recorded successfully ✅");
       setForm({ ...form, soldQuantity: '', staff: '' });

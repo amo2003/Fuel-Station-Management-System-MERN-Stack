@@ -17,7 +17,7 @@ function AddStock() {
   // Fetch suppliers from backend
   const fetchSuppliers = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/suppliers");
+      const res = await axios.get("https://eac34b48-2a45-4b11-86c9-a129e031408d-prod.e1-us-east-azure.choreoapis.dev/fuel/backend/v1.0/suppliers");
       setSuppliers(res.data.suppliers || []);
     } catch (err) {
       console.error("Error fetching suppliers:", err);
@@ -39,7 +39,7 @@ function AddStock() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post("http://localhost:5000/stocks", stocks);
+      const res = await axios.post("https://eac34b48-2a45-4b11-86c9-a129e031408d-prod.e1-us-east-azure.choreoapis.dev/fuel/backend/v1.0/stocks", stocks);
       const stockId = res.data.stock?._id;
       if (!stockId) throw new Error("No stock ID returned");
       alert("Stock added successfully ✅");

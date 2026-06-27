@@ -4,7 +4,7 @@ import { useParams } from "react-router-dom";
 import "./CustomerChat.css";
 import axios from "axios";
 
-const socket = io("http://localhost:5000", { transports: ["websocket"] });
+const socket = io("https://eac34b48-2a45-4b11-86c9-a129e031408d-prod.e1-us-east-azure.choreoapis.dev/fuel/backend/v1.0", { transports: ["websocket"] });
 
 function CustomerChat() {
   const { pin } = useParams();
@@ -15,7 +15,7 @@ function CustomerChat() {
   useEffect(() => {
     const fetchHistory = async () => {
       try {
-        const res = await axios.get(`http://localhost:5000/api/chat/pin/${pin}`);
+        const res = await axios.get(`https://eac34b48-2a45-4b11-86c9-a129e031408d-prod.e1-us-east-azure.choreoapis.dev/fuel/backend/v1.0/api/chat/pin/${pin}`);
         if (res.data.success) setMessages(res.data.data.map(m => ({ sender: m.sender, text: m.message, pin: m.pin, seen: m.seen })));
       } catch (err) {
         console.error(err);

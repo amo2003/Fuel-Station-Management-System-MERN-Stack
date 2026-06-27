@@ -13,7 +13,7 @@ function BulkPaymentList() {
 
   const fetchPayments = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/api/payments");
+      const res = await axios.get("https://eac34b48-2a45-4b11-86c9-a129e031408d-prod.e1-us-east-azure.choreoapis.dev/fuel/backend/v1.0/api/payments");
       if (res.data.status === "ok") {
         setPayments(res.data.data);
       } else {
@@ -30,7 +30,7 @@ function BulkPaymentList() {
   const deletePayment = async (paymentId) => {
     if (!window.confirm("Are you sure you want to delete this payment?")) return;
     try {
-      const res = await axios.delete(`http://localhost:5000/api/payments/${paymentId}`);
+      const res = await axios.delete(`https://eac34b48-2a45-4b11-86c9-a129e031408d-prod.e1-us-east-azure.choreoapis.dev/fuel/backend/v1.0/api/payments/${paymentId}`);
       if (res.data.status === "ok") {
         alert("Payment deleted successfully");
         setPayments(payments.filter((p) => p._id !== paymentId));

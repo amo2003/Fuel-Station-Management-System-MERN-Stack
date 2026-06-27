@@ -21,7 +21,7 @@ function UpdateFactory() {
   useEffect(() => {
     const fetchFactory = async () => {
       try {
-        const res = await axios.get(`http://localhost:5000/factory/getFactory/${id}`);
+        const res = await axios.get(`https://eac34b48-2a45-4b11-86c9-a129e031408d-prod.e1-us-east-azure.choreoapis.dev/fuel/backend/v1.0/factory/getFactory/${id}`);
         if (res.data.status === 'ok') {
           setFactory(res.data.data);
           setError(null);
@@ -47,7 +47,7 @@ function UpdateFactory() {
     e.preventDefault();
 
     try {
-      const res = await axios.put(`http://localhost:5000/factory/updateFactory/${id}`, factory);
+      const res = await axios.put(`https://eac34b48-2a45-4b11-86c9-a129e031408d-prod.e1-us-east-azure.choreoapis.dev/fuel/backend/v1.0/factory/updateFactory/${id}`, factory);
       if (res.data.status === 'ok') {
         alert('Factory updated successfully');
         navigate(`/factory/profile/${id}`);

@@ -32,7 +32,7 @@ function AddMember() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post("http://localhost:5000/members", inputs);
+      const res = await axios.post("https://eac34b48-2a45-4b11-86c9-a129e031408d-prod.e1-us-east-azure.choreoapis.dev/fuel/backend/v1.0/members", inputs);
       const memberId = res.data.member._id;
       if (!memberId) throw new Error("No member ID returned");
       alert("Member added successfully");

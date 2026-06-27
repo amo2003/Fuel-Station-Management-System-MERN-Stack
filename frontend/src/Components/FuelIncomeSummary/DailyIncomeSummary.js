@@ -13,13 +13,13 @@ function DailySummary() {
   const [searchDate, setSearchDate] = useState(""); 
 
   useEffect(() => {
-    axios.get("http://localhost:5000/sales")
+    axios.get("https://eac34b48-2a45-4b11-86c9-a129e031408d-prod.e1-us-east-azure.choreoapis.dev/fuel/backend/v1.0/sales")
       .then(res => setSales(res.data.sales))
       .catch(err => console.error("Failed to fetch sales", err));
   }, []);
 
   useEffect(() => {
-    axios.get("http://localhost:5000/fuelprices/dailyfuelprices")
+    axios.get("https://eac34b48-2a45-4b11-86c9-a129e031408d-prod.e1-us-east-azure.choreoapis.dev/fuel/backend/v1.0/fuelprices/dailyfuelprices")
       .then(res => {
         const pricesArray = res.data.prices || [];
         const loadedPrices = {};
@@ -69,7 +69,7 @@ function DailySummary() {
 
     try {
       await Promise.all(Object.entries(fuelTypes).map(([type, pricePerLiter]) =>
-        axios.post("http://localhost:5000/fuelprices/dailyfuelprices", {
+        axios.post("https://eac34b48-2a45-4b11-86c9-a129e031408d-prod.e1-us-east-azure.choreoapis.dev/fuel/backend/v1.0/fuelprices/dailyfuelprices", {
           type,
           pricePerLiter: parseFloat(pricePerLiter),
           date

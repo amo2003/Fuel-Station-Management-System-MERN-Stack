@@ -20,7 +20,7 @@ function EVPaymentList() {
 
   const fetchPayments = async () => {
     try {
-      const response = await axios.get("http://localhost:5000/evpayment/evpayment");
+      const response = await axios.get("https://eac34b48-2a45-4b11-86c9-a129e031408d-prod.e1-us-east-azure.choreoapis.dev/fuel/backend/v1.0/evpayment/evpayment");
       if (response.data.status === "ok") {
         const sorted = response.data.data
           .slice()
@@ -42,7 +42,7 @@ function EVPaymentList() {
     if (!window.confirm("Are you sure you want to delete this payment?")) return;
     setDeletingId(id);
     try {
-      const response = await axios.delete(`http://localhost:5000/evpayment/delete/${id}`);
+      const response = await axios.delete(`https://eac34b48-2a45-4b11-86c9-a129e031408d-prod.e1-us-east-azure.choreoapis.dev/fuel/backend/v1.0/evpayment/delete/${id}`);
       if (response.data.status === "ok") {
         alert("Payment deleted successfully.");
         fetchPayments();

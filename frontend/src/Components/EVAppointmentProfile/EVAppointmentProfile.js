@@ -28,7 +28,7 @@ function AppointmentProfile() {
   useEffect(() => {
     const fetchAppointment = async () => {
       try {
-        const res = await axios.get(`http://localhost:5000/appoinment/getbyid/${id}`);
+        const res = await axios.get(`https://eac34b48-2a45-4b11-86c9-a129e031408d-prod.e1-us-east-azure.choreoapis.dev/fuel/backend/v1.0/appoinment/getbyid/${id}`);
         setAppointment(res.data);
       } catch (err) {
         setError("Failed to fetch appointment");
@@ -43,7 +43,7 @@ function AppointmentProfile() {
   const handleDelete = async () => {
     if (window.confirm("Are you sure you want to delete this appointment?")) {
       try {
-        await axios.delete(`http://localhost:5000/appoinment/delete/${id}`);
+        await axios.delete(`https://eac34b48-2a45-4b11-86c9-a129e031408d-prod.e1-us-east-azure.choreoapis.dev/fuel/backend/v1.0/appoinment/delete/${id}`);
         setMessage("Appointment deleted successfully.");
         setTimeout(() => navigate("/mainhome"), 2000);
       } catch (err) {

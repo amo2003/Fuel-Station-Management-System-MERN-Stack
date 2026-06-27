@@ -17,7 +17,7 @@ function EVProfile() {
   useEffect(() => {
     const fetchEV = async () => {
       try {
-        const res = await axios.get(`http://localhost:5000/ev/getEV/${id}`);
+        const res = await axios.get(`https://eac34b48-2a45-4b11-86c9-a129e031408d-prod.e1-us-east-azure.choreoapis.dev/fuel/backend/v1.0/ev/getEV/${id}`);
         if (res.data.status === "ok") {
           setEV(res.data.data);
           setError(null);
@@ -41,7 +41,7 @@ function EVProfile() {
       if (ev?.gmail) {
         try {
           const res = await axios.get(
-            `http://localhost:5000/appoinment/getAppointmentsByEmail?gmail=${ev.gmail}`
+            `https://eac34b48-2a45-4b11-86c9-a129e031408d-prod.e1-us-east-azure.choreoapis.dev/fuel/backend/v1.0/appoinment/getAppointmentsByEmail?gmail=${ev.gmail}`
           );
           if (Array.isArray(res.data) && res.data.length > 0) {
             setHasAppointments(true);
@@ -60,7 +60,7 @@ function EVProfile() {
   const handleDelete = async () => {
     if (window.confirm("Are you sure you want to delete your EV profile?")) {
       try {
-        const res = await axios.delete(`http://localhost:5000/ev/deleteEV/${id}`);
+        const res = await axios.delete(`https://eac34b48-2a45-4b11-86c9-a129e031408d-prod.e1-us-east-azure.choreoapis.dev/fuel/backend/v1.0/ev/deleteEV/${id}`);
         if (res.data.status === "ok") {
           alert("EV profile deleted successfully");
           localStorage.removeItem("evUser");

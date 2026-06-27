@@ -19,7 +19,7 @@ function ForgotPassword() {
     }
 
     try {
-      const res = await axios.post("http://localhost:5000/factory/reset-password", {
+      const res = await axios.post("https://eac34b48-2a45-4b11-86c9-a129e031408d-prod.e1-us-east-azure.choreoapis.dev/fuel/backend/v1.0/factory/reset-password", {
         gmail,
         password,
       });

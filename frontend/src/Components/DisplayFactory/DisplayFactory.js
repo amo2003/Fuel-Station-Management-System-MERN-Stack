@@ -17,7 +17,7 @@ function AllFactories() {
   useEffect(() => {
     const fetchFactories = async () => {
       try {
-        const res = await axios.get('http://localhost:5000/factory/getFactorys');
+        const res = await axios.get('https://eac34b48-2a45-4b11-86c9-a129e031408d-prod.e1-us-east-azure.choreoapis.dev/fuel/backend/v1.0/factory/getFactorys');
         if (res.data.status === 'ok') {
           setFactories(res.data.data);
           setFiltered(res.data.data);
@@ -38,7 +38,7 @@ function AllFactories() {
   const handleDelete = async (id) => {
     if (window.confirm('Are you sure you want to delete this factory?')) {
       try {
-        const res = await axios.delete(`http://localhost:5000/factory/deleteFactory/${id}`);
+        const res = await axios.delete(`https://eac34b48-2a45-4b11-86c9-a129e031408d-prod.e1-us-east-azure.choreoapis.dev/fuel/backend/v1.0/factory/deleteFactory/${id}`);
         if (res.data.status === 'ok') {
           alert('Factory deleted successfully');
           const updated = factories.filter((f) => f._id !== id);

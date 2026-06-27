@@ -22,7 +22,7 @@ function UpdateEV() {
   useEffect(() => {
     const fetchEV = async () => {
       try {
-        const res = await axios.get(`http://localhost:5000/ev/getEV/${id}`);
+        const res = await axios.get(`https://eac34b48-2a45-4b11-86c9-a129e031408d-prod.e1-us-east-azure.choreoapis.dev/fuel/backend/v1.0/ev/getEV/${id}`);
         if (res.data.status === 'ok') {
           setEV(res.data.data);
           setError(null);
@@ -48,7 +48,7 @@ function UpdateEV() {
     e.preventDefault();
 
     try {
-      const res = await axios.put(`http://localhost:5000/ev/updateEV/${id}`, ev);
+      const res = await axios.put(`https://eac34b48-2a45-4b11-86c9-a129e031408d-prod.e1-us-east-azure.choreoapis.dev/fuel/backend/v1.0/ev/updateEV/${id}`, ev);
       if (res.data.status === 'ok') {
         alert('EV updated successfully');
         navigate(`/ev/profile/${id}`);

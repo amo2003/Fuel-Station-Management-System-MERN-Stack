@@ -35,7 +35,7 @@ function UpdateAppointment() {
   useEffect(() => {
     const fetchAppointment = async () => {
       try {
-        const res = await axios.get(`http://localhost:5000/appoinment/getbyid/${id}`);
+        const res = await axios.get(`https://eac34b48-2a45-4b11-86c9-a129e031408d-prod.e1-us-east-azure.choreoapis.dev/fuel/backend/v1.0/appoinment/getbyid/${id}`);
         setForm(res.data);
         fetchBookedSlots(res.data.date, res.data.slot);
       } catch (err) {
@@ -50,7 +50,7 @@ function UpdateAppointment() {
   // Fetch booked slots for selected date
   const fetchBookedSlots = async (date, currentSlot) => {
     try {
-      const res = await axios.get(`http://localhost:5000/appoinment/getone?date=${date}`);
+      const res = await axios.get(`https://eac34b48-2a45-4b11-86c9-a129e031408d-prod.e1-us-east-azure.choreoapis.dev/fuel/backend/v1.0/appoinment/getone?date=${date}`);
       const slots = res.data
         .filter((item) => item.slot !== currentSlot) 
         .map((item) => item.slot);
@@ -74,7 +74,7 @@ function UpdateAppointment() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.put(`http://localhost:5000/appoinment/update/${id}`, form);
+      await axios.put(`https://eac34b48-2a45-4b11-86c9-a129e031408d-prod.e1-us-east-azure.choreoapis.dev/fuel/backend/v1.0/appoinment/update/${id}`, form);
       setMessage("Appointment updated successfully");
       setTimeout(() => navigate(`/appoinment/profile/${id}`), 2000);
     } catch (err) {

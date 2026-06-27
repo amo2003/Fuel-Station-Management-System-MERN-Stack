@@ -12,7 +12,7 @@ const EVRatingPage = () => {
 
   const handleSubmit = async () => {
     try {
-      await axios.post("http://localhost:5000/rating/add", { rating });
+      await axios.post("https://eac34b48-2a45-4b11-86c9-a129e031408d-prod.e1-us-east-azure.choreoapis.dev/fuel/backend/v1.0/rating/add", { rating });
       alert(`Thank you for rating us ${rating} stars!`);
       navigate("/");
     } catch (error) {

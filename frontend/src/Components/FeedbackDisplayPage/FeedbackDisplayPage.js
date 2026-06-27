@@ -10,7 +10,7 @@ function FeedbackDisplayPage() {
   // Fetch all feedbacks
   const fetchFeedbacks = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/feedbacks");
+      const res = await axios.get("https://eac34b48-2a45-4b11-86c9-a129e031408d-prod.e1-us-east-azure.choreoapis.dev/fuel/backend/v1.0/feedbacks");
       setFeedbacks(res.data.feedbacks || []); // ensure array
     } catch (error) {
       console.error("Failed to fetch feedbacks:", error);
@@ -25,7 +25,7 @@ function FeedbackDisplayPage() {
   const handleDelete = async (id) => {
     if (window.confirm("Are you sure you want to delete this feedback?")) {
       try {
-        await axios.delete(`http://localhost:5000/feedbacks/${id}`);
+        await axios.delete(`https://eac34b48-2a45-4b11-86c9-a129e031408d-prod.e1-us-east-azure.choreoapis.dev/fuel/backend/v1.0/feedbacks/${id}`);
         fetchFeedbacks();
         alert("Feedback delete Success");
         window.location.reload();

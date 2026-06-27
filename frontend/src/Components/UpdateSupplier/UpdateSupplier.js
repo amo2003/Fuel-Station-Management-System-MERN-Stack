@@ -19,7 +19,7 @@ function UpdateSupplier() {
   useEffect(() => {
     const fetchSupplier = async () => {
       try {
-        const res = await axios.get(`http://localhost:5000/suppliers/${id}`);
+        const res = await axios.get(`https://eac34b48-2a45-4b11-86c9-a129e031408d-prod.e1-us-east-azure.choreoapis.dev/fuel/backend/v1.0/suppliers/${id}`);
         setSupplier(res.data.supplier);
       } catch (err) {
         console.error(err);
@@ -48,7 +48,7 @@ function UpdateSupplier() {
   const handleUpdate = async (e) => {
     e.preventDefault();
     try {
-      await axios.put(`http://localhost:5000/suppliers/${id}`, supplier);
+      await axios.put(`https://eac34b48-2a45-4b11-86c9-a129e031408d-prod.e1-us-east-azure.choreoapis.dev/fuel/backend/v1.0/suppliers/${id}`, supplier);
       alert("Supplier updated successfully ✅");
       navigate("/suppliers");
     } catch (err) {

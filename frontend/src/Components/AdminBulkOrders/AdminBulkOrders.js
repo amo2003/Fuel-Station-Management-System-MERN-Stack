@@ -19,7 +19,7 @@ function AdminBulkOrders() {
     setLoading(true);
     setError(null);
     try {
-      const res = await axios.get("http://localhost:5000/api/bulkorders/all");
+      const res = await axios.get("https://eac34b48-2a45-4b11-86c9-a129e031408d-prod.e1-us-east-azure.choreoapis.dev/fuel/backend/v1.0/api/bulkorders/all");
       if (res.data.status === "ok") {
         setOrders(res.data.data);
       } else {
@@ -45,11 +45,11 @@ function AdminBulkOrders() {
     try {
       let url = "";
       if (action === "confirm") {
-        url = `http://localhost:5000/api/bulkorders/confirm/${orderId}`;
+        url = `https://eac34b48-2a45-4b11-86c9-a129e031408d-prod.e1-us-east-azure.choreoapis.dev/fuel/backend/v1.0/api/bulkorders/confirm/${orderId}`;
       } else if (action === "cancel") {
-        url = `http://localhost:5000/api/bulkorders/reject/${orderId}`;
+        url = `https://eac34b48-2a45-4b11-86c9-a129e031408d-prod.e1-us-east-azure.choreoapis.dev/fuel/backend/v1.0/api/bulkorders/reject/${orderId}`;
       } else if (action === "undo") {
-        url = `http://localhost:5000/api/bulkorders/undo-confirm/${orderId}`;
+        url = `https://eac34b48-2a45-4b11-86c9-a129e031408d-prod.e1-us-east-azure.choreoapis.dev/fuel/backend/v1.0/api/bulkorders/undo-confirm/${orderId}`;
       }
 
       const res = await axios.put(url);
@@ -79,7 +79,7 @@ function AdminBulkOrders() {
 
     setProcessingId(orderId);
     try {
-      const res = await axios.delete(`http://localhost:5000/api/bulkorders/${orderId}`);
+      const res = await axios.delete(`https://eac34b48-2a45-4b11-86c9-a129e031408d-prod.e1-us-east-azure.choreoapis.dev/fuel/backend/v1.0/api/bulkorders/${orderId}`);
       if (res.data.status === "ok") {
         alert("Order deleted successfully");
         fetchOrders();

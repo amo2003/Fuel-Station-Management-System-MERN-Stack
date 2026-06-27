@@ -21,7 +21,7 @@ function UpdateMember() {
   useEffect(() => {
     const fetchMember = async () => {
       try {
-        const res = await axios.get(`http://localhost:5000/members/${id}`);
+        const res = await axios.get(`https://eac34b48-2a45-4b11-86c9-a129e031408d-prod.e1-us-east-azure.choreoapis.dev/fuel/backend/v1.0/members/${id}`);
         setForm(res.data.member);
       } catch (err) {
         console.log("Error fetching member:", err);
@@ -37,7 +37,7 @@ function UpdateMember() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.put(`http://localhost:5000/members/${id}`, form);
+      await axios.put(`https://eac34b48-2a45-4b11-86c9-a129e031408d-prod.e1-us-east-azure.choreoapis.dev/fuel/backend/v1.0/members/${id}`, form);
       alert("Member updated successfully!");
       navigate("/displaymember");
     } catch (err) {

@@ -12,7 +12,7 @@ function MemberDisplay() {
 
   const fetchMembers = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/members");
+      const res = await axios.get("https://eac34b48-2a45-4b11-86c9-a129e031408d-prod.e1-us-east-azure.choreoapis.dev/fuel/backend/v1.0/members");
       setMembers(res.data.members);
       setFilteredMembers(res.data.members);
     } catch (error) {
@@ -37,7 +37,7 @@ function MemberDisplay() {
   const handleDelete = async (id) => {
     if (window.confirm("Are you sure you want to delete this staff member?")) {
       try {
-        await axios.delete(`http://localhost:5000/members/${id}`);
+        await axios.delete(`https://eac34b48-2a45-4b11-86c9-a129e031408d-prod.e1-us-east-azure.choreoapis.dev/fuel/backend/v1.0/members/${id}`);
         fetchMembers();
       } catch (error) {
         console.error("Error deleting member:", error);

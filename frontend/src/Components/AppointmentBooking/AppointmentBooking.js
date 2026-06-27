@@ -45,7 +45,7 @@ function AppointmentBooking() {
     setForm({ ...form, date: selectedDate, slot: "" });
 
     try {
-      const res = await axios.get(`http://localhost:5000/appoinment/getone?date=${selectedDate}`);
+      const res = await axios.get(`https://eac34b48-2a45-4b11-86c9-a129e031408d-prod.e1-us-east-azure.choreoapis.dev/fuel/backend/v1.0/appoinment/getone?date=${selectedDate}`);
       const booked = res.data.map((item) => item.slot);
       setBookedSlots(booked);
     } catch (err) {
@@ -56,7 +56,7 @@ function AppointmentBooking() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post("http://localhost:5000/appoinment/appoinment", form);
+      const response = await axios.post("https://eac34b48-2a45-4b11-86c9-a129e031408d-prod.e1-us-east-azure.choreoapis.dev/fuel/backend/v1.0/appoinment/appoinment", form);
       const id = response.data.newBooking._id;
       alert("Booking Success");
       navigate(`/appoinment/profile/${id}`);

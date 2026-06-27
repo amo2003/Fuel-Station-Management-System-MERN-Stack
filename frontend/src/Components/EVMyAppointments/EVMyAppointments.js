@@ -18,7 +18,7 @@ function EVMyAppointments() {
     const fetchAppointments = async () => {
       try {
         const res = await axios.get(
-          `http://localhost:5000/appoinment/getAppointmentsByEmail?gmail=${gmail}`
+          `https://eac34b48-2a45-4b11-86c9-a129e031408d-prod.e1-us-east-azure.choreoapis.dev/fuel/backend/v1.0/appoinment/getAppointmentsByEmail?gmail=${gmail}`
         );
         if (Array.isArray(res.data)) {
           setAppointments(res.data);
@@ -40,7 +40,7 @@ function EVMyAppointments() {
   const handleDelete = async (id) => {
     if (window.confirm("Are you sure you want to delete this appointment?")) {
       try {
-        await axios.delete(`http://localhost:5000/appoinment/delete/${id}`);
+        await axios.delete(`https://eac34b48-2a45-4b11-86c9-a129e031408d-prod.e1-us-east-azure.choreoapis.dev/fuel/backend/v1.0/appoinment/delete/${id}`);
         const updated = appointments.filter((a) => a._id !== id);
         setAppointments(updated);
         setFilteredAppointments(updated);

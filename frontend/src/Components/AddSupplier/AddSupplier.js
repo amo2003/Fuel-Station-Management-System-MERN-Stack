@@ -35,7 +35,7 @@ function AddSupplier() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("http://localhost:5000/suppliers", supplier);
+      await axios.post("https://eac34b48-2a45-4b11-86c9-a129e031408d-prod.e1-us-east-azure.choreoapis.dev/fuel/backend/v1.0/suppliers", supplier);
       alert("Supplier added successfully ✅");
       navigate("/suppliers");
     } catch (err) {

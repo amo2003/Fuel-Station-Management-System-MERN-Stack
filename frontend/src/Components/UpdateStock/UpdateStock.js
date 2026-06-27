@@ -22,7 +22,7 @@ function UpdateStock() {
   // ✅ Fetch suppliers
   const fetchSuppliers = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/suppliers");
+      const res = await axios.get("https://eac34b48-2a45-4b11-86c9-a129e031408d-prod.e1-us-east-azure.choreoapis.dev/fuel/backend/v1.0/suppliers");
       setSuppliers(res.data.suppliers || []);
     } catch (err) {
       console.error("Error fetching suppliers:", err);
@@ -34,7 +34,7 @@ function UpdateStock() {
   useEffect(() => {
     const fetchStock = async () => {
       try {
-        const res = await axios.get(`http://localhost:5000/stocks/${id}`);
+        const res = await axios.get(`https://eac34b48-2a45-4b11-86c9-a129e031408d-prod.e1-us-east-azure.choreoapis.dev/fuel/backend/v1.0/stocks/${id}`);
         const stockData = res.data.stock;
 
         setStock({
@@ -69,7 +69,7 @@ function UpdateStock() {
         originalType
       };
 
-      await axios.put(`http://localhost:5000/stocks/${id}`, payload);
+      await axios.put(`https://eac34b48-2a45-4b11-86c9-a129e031408d-prod.e1-us-east-azure.choreoapis.dev/fuel/backend/v1.0/stocks/${id}`, payload);
       alert('Stock updated successfully ✅');
       navigate(`/displaystock/${id}`);
     } catch (err) {

@@ -23,7 +23,7 @@ function EVRegister() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post('http://localhost:5000/ev/evregister', formData);
+      const res = await axios.post('https://eac34b48-2a45-4b11-86c9-a129e031408d-prod.e1-us-east-azure.choreoapis.dev/fuel/backend/v1.0/ev/evregister', formData);
       alert(res.data.message);
       navigate('/evlog');
     } catch (err) {

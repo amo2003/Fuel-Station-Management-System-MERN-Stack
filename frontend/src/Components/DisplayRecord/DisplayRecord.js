@@ -16,7 +16,7 @@ function DisplayRecord() {
   }, []);
 
   const fetchSales = () => {
-    axios.get("http://localhost:5000/sales")
+    axios.get("https://eac34b48-2a45-4b11-86c9-a129e031408d-prod.e1-us-east-azure.choreoapis.dev/fuel/backend/v1.0/sales")
       .then(res => setSales(res.data.sales))
       .catch(err => console.error("Failed to fetch sales", err));
   };
@@ -24,7 +24,7 @@ function DisplayRecord() {
   const handleDelete = async (id) => {
     if (window.confirm("Are you sure you want to delete this sale record?")) {
       try {
-        await axios.delete(`http://localhost:5000/sales/${id}`);
+        await axios.delete(`https://eac34b48-2a45-4b11-86c9-a129e031408d-prod.e1-us-east-azure.choreoapis.dev/fuel/backend/v1.0/sales/${id}`);
         setSales(sales.filter(sale => sale._id !== id));
         alert("Sale deleted successfully");
       } catch (err) {

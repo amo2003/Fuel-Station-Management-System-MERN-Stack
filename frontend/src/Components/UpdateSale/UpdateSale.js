@@ -16,7 +16,7 @@ function UpdateSale() {
   });
  
   useEffect(() => {
-    axios.get(`http://localhost:5000/sales/${id}`)
+    axios.get(`https://eac34b48-2a45-4b11-86c9-a129e031408d-prod.e1-us-east-azure.choreoapis.dev/fuel/backend/v1.0/sales/${id}`)
       .then(res => setForm(res.data.sale))
       .catch(err => console.error("Error fetching sale:", err));
   }, [id]);
@@ -28,7 +28,7 @@ function UpdateSale() {
   const handleUpdate = async (e) => {
     e.preventDefault();
     try {
-      await axios.put(`http://localhost:5000/sales/${id}`, form);
+      await axios.put(`https://eac34b48-2a45-4b11-86c9-a129e031408d-prod.e1-us-east-azure.choreoapis.dev/fuel/backend/v1.0/sales/${id}`, form);
       alert("Sale updated successfully");
       navigate('/sales');
     } catch (err) {
@@ -39,7 +39,7 @@ function UpdateSale() {
 
     // Fetch staff members
   useEffect(() => {
-    axios.get("http://localhost:5000/Members")
+    axios.get("https://eac34b48-2a45-4b11-86c9-a129e031408d-prod.e1-us-east-azure.choreoapis.dev/fuel/backend/v1.0/Members")
       .then(res => setMembers(res.data.members || []))
       .catch(err => console.error("Error fetching members", err));
   }, []);

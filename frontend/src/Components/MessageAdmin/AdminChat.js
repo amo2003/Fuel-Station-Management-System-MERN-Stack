@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 import "./AdminChat.css";
 
-const socket = io("http://localhost:5000", { transports: ["websocket"] });
+const socket = io("https://eac34b48-2a45-4b11-86c9-a129e031408d-prod.e1-us-east-azure.choreoapis.dev/fuel/backend/v1.0", { transports: ["websocket"] });
 
 function AdminChat() {
   const [pins, setPins] = useState([]);
@@ -17,7 +17,7 @@ function AdminChat() {
   // ✅ Fetch pins + unread counts
   const fetchPins = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/api/chat/pins");
+      const res = await axios.get("https://eac34b48-2a45-4b11-86c9-a129e031408d-prod.e1-us-east-azure.choreoapis.dev/fuel/backend/v1.0/api/chat/pins");
       if (res.data.success) {
         setPins(res.data.data.map((p) => p.pin));
         setNotifications(
@@ -35,7 +35,7 @@ function AdminChat() {
   // ✅ Fetch messages for selected pin
   const fetchMessages = async (pin) => {
     try {
-      const res = await axios.get(`http://localhost:5000/api/chat/pin/${pin}`);
+      const res = await axios.get(`https://eac34b48-2a45-4b11-86c9-a129e031408d-prod.e1-us-east-azure.choreoapis.dev/fuel/backend/v1.0/api/chat/pin/${pin}`);
       if (res.data.success) {
         setMessages(
           res.data.data.map((m) => ({
@@ -126,7 +126,7 @@ function AdminChat() {
 
     try {
       const res = await axios.delete(
-        `http://localhost:5000/api/chat/delete/${selectedPin}`
+        `https://eac34b48-2a45-4b11-86c9-a129e031408d-prod.e1-us-east-azure.choreoapis.dev/fuel/backend/v1.0/api/chat/delete/${selectedPin}`
       );
       if (res.data.success) {
         setMessages([]);

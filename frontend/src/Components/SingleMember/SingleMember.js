@@ -13,7 +13,7 @@ function SingleMember() {
   useEffect(() => {
     const fetchMember = async () => {
       try {
-        const res = await axios.get(`http://localhost:5000/members/${id}`);
+        const res = await axios.get(`https://eac34b48-2a45-4b11-86c9-a129e031408d-prod.e1-us-east-azure.choreoapis.dev/fuel/backend/v1.0/members/${id}`);
         setMember(res.data.member);
       } catch (err) {
         console.error("Error fetching member:", err);

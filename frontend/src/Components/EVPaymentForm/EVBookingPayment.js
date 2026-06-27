@@ -8,9 +8,9 @@ import master from "../../assets/master.png";
 import amex from "../../assets/ame.png";
 import { FaStar } from "react-icons/fa";
 
-const API_BASE = "http://localhost:5000/evcombined/book";
-const PAYHERE_HASH_API = "http://localhost:5000/getPayhereHash";
-const EV_PAYMENT_API = "http://localhost:5000/evpayment";
+const API_BASE = "https://eac34b48-2a45-4b11-86c9-a129e031408d-prod.e1-us-east-azure.choreoapis.dev/fuel/backend/v1.0/evcombined/book";
+const PAYHERE_HASH_API = "https://eac34b48-2a45-4b11-86c9-a129e031408d-prod.e1-us-east-azure.choreoapis.dev/fuel/backend/v1.0/getPayhereHash";
+const EV_PAYMENT_API = "https://eac34b48-2a45-4b11-86c9-a129e031408d-prod.e1-us-east-azure.choreoapis.dev/fuel/backend/v1.0/evpayment";
 
 const slots = [
   "08:00-10:00", "10:00-12:00", "12:00-14:00",
@@ -88,7 +88,7 @@ function EVBookingPayment() {
     setForm({ ...form, date: selectedDate, slot: "" });
     try {
       const res = await axios.get(
-        `http://localhost:5000/appoinment/getone?date=${selectedDate}`
+        `https://eac34b48-2a45-4b11-86c9-a129e031408d-prod.e1-us-east-azure.choreoapis.dev/fuel/backend/v1.0/appoinment/getone?date=${selectedDate}`
       );
       const booked = res.data.map((item) => item.slot);
       setBookedSlots(booked);
@@ -179,7 +179,7 @@ function EVBookingPayment() {
         merchant_id: "1231683",
         return_url: window.location.href,
         cancel_url: window.location.href,
-        notify_url: "http://localhost:5000/evpayment/notify",
+        notify_url: "https://eac34b48-2a45-4b11-86c9-a129e031408d-prod.e1-us-east-azure.choreoapis.dev/fuel/backend/v1.0/evpayment/notify",
         order_id: orderId,
         items: `${form.vtype} EV Charging`,
         amount,

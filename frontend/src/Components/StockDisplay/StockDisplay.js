@@ -14,7 +14,7 @@ function StockDisplay() {
   useEffect(() => {
     const fetchStocks = async () => {
       try {
-        const res = await axios.get('http://localhost:5000/stocks');
+        const res = await axios.get('https://eac34b48-2a45-4b11-86c9-a129e031408d-prod.e1-us-east-azure.choreoapis.dev/fuel/backend/v1.0/stocks');
         setStocks(res.data.stocks);
       } catch (err) {
         console.error('Failed to fetch stocks:', err);
@@ -26,7 +26,7 @@ function StockDisplay() {
   const handleDelete = async (id) => {
     if (window.confirm("Are you sure you want to delete this stock entry?")) {
       try {
-        await axios.delete(`http://localhost:5000/stocks/${id}`);
+        await axios.delete(`https://eac34b48-2a45-4b11-86c9-a129e031408d-prod.e1-us-east-azure.choreoapis.dev/fuel/backend/v1.0/stocks/${id}`);
         setStocks(stocks.filter(stock => stock._id !== id));
         alert('Stock deleted successfully');
       } catch (err) {

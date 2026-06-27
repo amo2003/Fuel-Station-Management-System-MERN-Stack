@@ -32,7 +32,14 @@ const app = express();
 
 // Middleware
 app.use(express.json());
-app.use(cors());
+app.use(cors({
+  origin: [
+    "http://localhost:3000",
+    /\.vercel\.app$/,
+    /\.choreoapis\.dev$/
+  ],
+  credentials: true
+}));
 
 app.use("/Members", Memberrouter);
 app.use("/Stocks", Stockrouter);

@@ -29,7 +29,7 @@ function FeedbackInsertPage() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("http://localhost:5000/feedbacks", formData);
+      await axios.post("https://eac34b48-2a45-4b11-86c9-a129e031408d-prod.e1-us-east-azure.choreoapis.dev/fuel/backend/v1.0/feedbacks", formData);
       setStatus("Feedback submitted successfully!");
       setFormData({
         name: "",

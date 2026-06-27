@@ -23,7 +23,7 @@ function PaymentPage() {
   useEffect(() => {
     const fetchStock = async () => {
       try {
-        const res = await axios.get(`http://localhost:5000/stocks/${id}`);
+        const res = await axios.get(`https://eac34b48-2a45-4b11-86c9-a129e031408d-prod.e1-us-east-azure.choreoapis.dev/fuel/backend/v1.0/stocks/${id}`);
         setStock(res.data.stock);
         setLoading(false);
       } catch (err) {
@@ -44,7 +44,7 @@ function PaymentPage() {
     const totalAmount = (stock.quantity * parseFloat(pricePerLiter)).toFixed(2);
 
     try {
-      await axios.post('http://localhost:5000/fuelpayments', {
+      await axios.post('https://eac34b48-2a45-4b11-86c9-a129e031408d-prod.e1-us-east-azure.choreoapis.dev/fuel/backend/v1.0/fuelpayments', {
         stockId: stock._id,
         date: stock.date,
         type: stock.type,
@@ -53,7 +53,7 @@ function PaymentPage() {
         amount: totalAmount
       });
 
-      const response = await axios.get(`http://localhost:5000/fuelpayments/stock/${stock._id}`);
+      const response = await axios.get(`https://eac34b48-2a45-4b11-86c9-a129e031408d-prod.e1-us-east-azure.choreoapis.dev/fuel/backend/v1.0/fuelpayments/stock/${stock._id}`);
       const paymentId = response.data.payment._id;
 
       alert('Payment recorded successfully!');
@@ -77,7 +77,7 @@ function PaymentPage() {
     const totalAmount = (stock.quantity * parseFloat(pricePerLiter)).toFixed(2);
 
     try {
-      const hashRes = await axios.post('http://localhost:5000/getPayhereHash', {
+      const hashRes = await axios.post('https://eac34b48-2a45-4b11-86c9-a129e031408d-prod.e1-us-east-azure.choreoapis.dev/fuel/backend/v1.0/getPayhereHash', {
         order_id: stock._id,
         amount: totalAmount,
         currency: "LKR"

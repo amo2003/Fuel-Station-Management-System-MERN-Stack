@@ -18,8 +18,8 @@ function FactoryProfile() {
   setLoading(true);
   try {
     const [factoryRes, ordersRes] = await Promise.all([
-      axios.get(`http://localhost:5000/factory/getFactory/${id}`),
-      axios.get(`http://localhost:5000/api/bulkorders/customer/${id}`)
+      axios.get(`https://eac34b48-2a45-4b11-86c9-a129e031408d-prod.e1-us-east-azure.choreoapis.dev/fuel/backend/v1.0/factory/getFactory/${id}`),
+      axios.get(`https://eac34b48-2a45-4b11-86c9-a129e031408d-prod.e1-us-east-azure.choreoapis.dev/fuel/backend/v1.0/api/bulkorders/customer/${id}`)
     ]);
 
     if (factoryRes.data.status === 'ok') {
@@ -49,7 +49,7 @@ useEffect(() => {
   const handleDelete = async () => {
     if (window.confirm('Are you sure you want to delete this factory?')) {
       try {
-        const res = await axios.delete(`http://localhost:5000/factory/deleteFactory/${id}`);
+        const res = await axios.delete(`https://eac34b48-2a45-4b11-86c9-a129e031408d-prod.e1-us-east-azure.choreoapis.dev/fuel/backend/v1.0/factory/deleteFactory/${id}`);
         if (res.data.status === 'ok') {
           alert('Factory deleted successfully');
           navigate('/flogin');
@@ -72,7 +72,7 @@ useEffect(() => {
 
     setCancelingOrderId(orderId);
     try {
-      const res = await axios.put(`http://localhost:5000/api/bulkorders/reject/${orderId}`);
+      const res = await axios.put(`https://eac34b48-2a45-4b11-86c9-a129e031408d-prod.e1-us-east-azure.choreoapis.dev/fuel/backend/v1.0/api/bulkorders/reject/${orderId}`);
       if (res.data.status === 'ok') {
         alert('Order cancelled successfully');
         navigate('/mainhome'); 
