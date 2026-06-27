@@ -2,7 +2,6 @@ import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { FaRobot } from "react-icons/fa";
 
-import axios from 'axios'; 
 import './Home.css';
 import HomeNav from '../HomeNav/HomeNav';
 import logoImg from '../../assets/f2.png';
@@ -17,16 +16,10 @@ import featureIcon3 from '../../assets/q2.jpg';
 
 const heroImages = [heroImage1, heroImage2, heroImage3];
 
-
 function Home() {
   const history = useNavigate();
-  const [admin, setAdmin] = useState({
-    gmail: "",
-    password: "",
-  });
   const [currentSlide, setCurrentSlide] = useState(0);
-  const [showLogin, setShowLogin] = useState(false);
-  
+
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % heroImages.length);
@@ -34,59 +27,20 @@ function Home() {
     return () => clearInterval(interval);
   }, []);
 
-
-
-  const handleInputChange = (e) => {
-    const { name, value } = e.target;
-    setAdmin((prevAdmin) => ({
-      ...prevAdmin,
-      [name]: value,
-    }));
-  };
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    try {
-      const response = await sendRequest();
-      if (response.admin) {
-        alert("Login Success");
-        history("/admin");
-      } else {
-        alert("Login error: Invalid credentials");
-      }
-    } catch (err) {
-      //alert("Error: " + err.message);
-      alert("Login error: Invalid credentials");
-
-    }
-  };
-
-const sendRequest = async () => {
-  return await axios
-    .post("http://localhost:5000/admin/login", {
-      gmail: admin.gmail,
-      password: admin.password,
-    })
-    .then((res) => res.data);
-};
-
   return (
     <>
       <HomeNav />
-{/*chat */}
-<button 
-  className="chat-button"
-  onClick={() => history("/enterpin")}
->
-  <FaRobot size={38} />
-</button>
 
+      {/* Chat button */}
+      <button className="chat-button" onClick={() => history("/enterpin")}>
+        <FaRobot size={38} />
+      </button>
 
       <div className="home-page">
         <section className="hero-section">
           <div className="hero-slideshow">
             {heroImages.map((img, index) => (
-              <div 
+              <div
                 key={index}
                 className={`hero-slide ${index === currentSlide ? 'active' : ''}`}
                 style={{ backgroundImage: `url(${img})` }}
@@ -94,15 +48,15 @@ const sendRequest = async () => {
                 <div className="slide-overlay">
                   <h1>Premium Fuel Solutions</h1>
                   <p>Efficient. Reliable. Always Available</p>
-                  <button onClick={() => setShowLogin(!showLogin)} className="cta-button">
-                    {showLogin ? 'Explore More' : 'Admin Login'}
-                  </button>
+                  {/*<button onClick={() => history('/admin')} className="cta-button">
+                    Admin Login
+                  </button>*/}
                 </div>
               </div>
             ))}
             <div className="slide-dots">
               {heroImages.map((_, index) => (
-                <span 
+                <span
                   key={index}
                   className={index === currentSlide ? 'active' : ''}
                   onClick={() => setCurrentSlide(index)}
@@ -111,7 +65,6 @@ const sendRequest = async () => {
             </div>
           </div>
         </section>
-        
 
         {/* Features Section */}
         <section className="features-section">
@@ -132,65 +85,32 @@ const sendRequest = async () => {
           </div>
         </section>
 
-        {/* Login/Register Section */}
-        <section className={`auth-section ${showLogin ? 'show-login' : ''}`}>
+        {/* Action Buttons Section */}
+        <section className="auth-section show-login">
           <div className="auth-container">
-            {showLogin ? (
-              <form className="login-form" onSubmit={handleSubmit}>
-                <h3>Admin Portal</h3>
-                <input
-                  type="email"
-                  id="gmail"
-                  name="gmail"
-                  onChange={handleInputChange}
-                  value={admin.gmail}
-                  placeholder="Admin Email"
-                  required
-                />
-                <input
-                  type="password"
-                  id="password"
-                  name="password"
-                  onChange={handleInputChange}
-                  value={admin.password}
-                  placeholder="Password"
-                  required
-                />
-                <div className="form-options">
-                  <label>
-                    <input type="checkbox" /> Remember me
-                  </label>
-                  <a href="/">Forgot password?</a>
-                </div>
-                <button type="submit">SIGN IN</button>
-              </form>
-            ) : (
-              <div className="welcome-content">
-                <div className="logo">
-                  <img src={logoImg} alt="FuelFlow Logo" />
-                  <h2>
-                    <span className="fuel">FUEL</span>
-                    <span className="flow">FLOW</span>
-                  </h2>
-                  <p className="subtitle">Dasu Filling Station, Galle</p>
-                </div>
-                <div className="action-buttons">
-                  <button onClick={() => history('/evlog')} className="action-button">
-                    Charge Your Electric Vehicle.
-                  </button>
-                  <button onClick={() => history('/flogin')} className="action-button">
-                    Place Your Commercial Purpose Fuel Order.
-                  </button>
-                  <button onClick={() => history('/stations')} className="action-button">
-                    Find Our Other Stations.
-                  </button>
-                </div>
+            <div className="welcome-content">
+              <div className="logo">
+                <img src={logoImg} alt="FuelFlow Logo" />
+                <h2>
+                  <span className="fuel">FUEL</span>
+                  <span className="flow">FLOW</span>
+                </h2>
+                <p className="subtitle">Dasu Filling Station, Galle</p>
               </div>
-            )}
+              <div className="action-buttons">
+                <button onClick={() => history('/evlog')} className="action-button">
+                  Charge Your Electric Vehicle.
+                </button>
+                <button onClick={() => history('/flogin')} className="action-button">
+                  Place Your Commercial Purpose Fuel Order.
+                </button>
+                <button onClick={() => history('/stations')} className="action-button">
+                  Find Our Other Stations.
+                </button>
+              </div>
+            </div>
           </div>
         </section>
-
-        
 
         {/* Testimonials Section */}
         <section className="testimonials-section">

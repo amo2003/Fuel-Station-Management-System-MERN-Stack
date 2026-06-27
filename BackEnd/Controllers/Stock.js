@@ -22,7 +22,7 @@ const addStocks = async (req, res) => {
   const { date, type, quantity, supplier } = req.body;
 
   try {
-    const newStock = new Stock({ date, type, quantity, supplier });
+    const newStock = new Stock({ date, type, quantity, supplier }); 
     await newStock.save();
 
     const fuel = await FuelStorage.findOne({ type });
@@ -84,14 +84,14 @@ const updateStock = async (req, res) => {
 
     const oldFuelStorage = await FuelStorage.findOne({ type: oldType });
     if (oldFuelStorage) {
-      oldFuelStorage.quantity -= oldQuantity;
+      oldFuelStorage.quantity -= oldQuantity;  //revrese old qunatiy
       if (oldFuelStorage.quantity < 0) oldFuelStorage.quantity = 0;
       await oldFuelStorage.save();
     }
 
     const newFuelStorage = await FuelStorage.findOne({ type });
     if (newFuelStorage) {
-      newFuelStorage.quantity += newQuantity;
+      newFuelStorage.quantity += newQuantity;  //add new quantity
       await newFuelStorage.save();
     } else {
       const newFuel = new FuelStorage({ type, quantity: newQuantity });
