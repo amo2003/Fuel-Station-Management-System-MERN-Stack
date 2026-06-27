@@ -11,6 +11,7 @@ return (
         <span className="logo-text">Dasu Filling <span className="logo-flow">Station, Galle.</span></span>
       </div>
       <ul className="navbar-links">
+        <li><Link to="/admin">Dashboard</Link></li>
         <li><Link to="/fuel-levels">Live Fuel Level</Link></li>
         <li><Link to="/evlog">Charge Your EV</Link></li>
         <li><Link to="/flogin">Place Fuel Order</Link></li>
