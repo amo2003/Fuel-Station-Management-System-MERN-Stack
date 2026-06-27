@@ -1,10 +1,9 @@
 import React, { useState, useEffect, useRef } from "react";
-import { io } from "socket.io-client";
 import { useParams } from "react-router-dom";
 import "./CustomerChat.css";
 import axios from "axios";
 
-const socket = io("https://eac34b48-2a45-4b11-86c9-a129e031408d-prod.e1-us-east-azure.choreoapis.dev/fuel/backend/v1.0", { transports: ["websocket"] });
+const API = "https://eac34b48-2a45-4b11-86c9-a129e031408d-prod.e1-us-east-azure.choreoapis.dev/fuel/backend/v1.0";
 
 function CustomerChat() {
   const { pin } = useParams();
@@ -12,65 +11,66 @@ function CustomerChat() {
   const [messages, setMessages] = useState([]);
   const messagesEndRef = useRef(null);
 
-  useEffect(() => {
-    const fetchHistory = async () => {
-      try {
-        const res = await axios.get(`https://eac34b48-2a45-4b11-86c9-a129e031408d-prod.e1-us-east-azure.choreoapis.dev/fuel/backend/v1.0/api/chat/pin/${pin}`);
-        if (res.data.success) setMessages(res.data.data.map(m => ({ sender: m.sender, text: m.message, pin: m.pin, seen: m.seen })));
-      } catch (err) {
-        console.error(err);
+  // Fetch messages (polling every 3 seconds)
+  const fetchMessages = async () => {
+    try {
+      const res = await axios.get(`${API}/api/chat/pin/${pin}`);
+      if (res.data.success) {
+        setMessages(res.data.data.map(m => ({
+          sender: m.sender,
+          text: m.message,
+          pin: m.pin,
+          seen: m.seen
+        })));
       }
-    };
-    fetchHistory();
-  }, [pin]);
+    } catch (err) {
+      console.error(err);
+    }
+  };
 
   useEffect(() => {
-    socket.emit("joinChat", { userType: "customer", pin });
-
-    socket.on("receiveMessage", (data) => {
-      if (data.pin === pin) setMessages(prev => [...prev, data]);
-    });
-
-    socket.on("messagesSeen", ({ pin: seenPin }) => {
-      if (seenPin === pin) {
-        setMessages(prev =>
-          prev.map(m => m.sender === "customer" ? { ...m, seen: true } : m)
-        );
-      }
-    });
-
-    return () => {
-      socket.off("receiveMessage");
-      socket.off("messagesSeen");
-    };
+    fetchMessages();
+    const interval = setInterval(fetchMessages, 3000);
+    return () => clearInterval(interval);
   }, [pin]);
 
   useEffect(() => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
   }, [messages]);
 
-  const sendMessage = () => {
+  const sendMessage = async () => {
     if (!message.trim()) return;
-    socket.emit("sendMessage", { sender: "customer", text: message, pin });
+    const text = message.trim();
     setMessage("");
+
+    // Optimistic update
+    setMessages(prev => [...prev, { sender: "customer", text, pin, seen: false }]);
+
+    try {
+      await axios.post(`${API}/api/chat/send`, {
+        sender: "customer",
+        message: text,
+        pin
+      });
+    } catch (err) {
+      console.error("Send failed:", err);
+    }
   };
 
   return (
     <div className="cus-chat-page">
-      
-      {/* 🔹 Logo + Welcome Note */}
       <div className="cus-chat-header">
         <img src={require("../../assets/f2.png")} alt="Logo" className="cus-chat-logo-img" />
-        <h3 className="cus-chat-welcome">👋 Welcome to Dasu Filling Station! We're here to chat with you.</h3>
+        <h3 className="cus-chat-welcome">👋 Welcome to Dasu Filling Station!</h3>
       </div>
 
       <div className="cus-chat-container">
-        <h2>Customer Chat (PIN: {pin})</h2>
+        <h2>Chat (PIN: {pin})</h2>
         <div className="cus-chat-messages">
           {messages.map((m, i) => (
             <div key={i} className={m.sender === "customer" ? "my-msg" : "other-msg"}>
-              <b>{m.sender}:</b> <span>{m.text}</span>
-              {!m.seen && m.sender === "customer" && " 🟢"}
+              <b>{m.sender}</b>
+              <span>{m.text}</span>
             </div>
           ))}
           <div ref={messagesEndRef} />
