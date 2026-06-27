@@ -1,25 +1,26 @@
 .ev-login-page {
   font-family: Arial, sans-serif;
-  background-image: url('../../assets/f1.jpg'); /* replace with actual path */
+  background-image: url('../../assets/f1.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   min-height: 100vh;
-  padding: 2rem 1rem;
+  padding: 0;
   backdrop-filter: blur(2px);
 }
 
+/* ---- Navbar ---- */
 .ev-login-navbar {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  height: 80px;
+  height: 56px;
   background-color: rgb(13, 59, 102);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 2rem;
+  padding: 0 1rem;
   box-sizing: border-box;
   z-index: 10;
 }
@@ -28,103 +29,112 @@
   font-weight: bold;
   color: white;
   text-decoration: none;
-  font-size: 1.2rem;
+  font-size: 1rem;
+  white-space: nowrap;
+}
+
+.nav-links {
+  display: flex;
+  flex-direction: row;
+  gap: 0.8rem;
+  align-items: center;
 }
 
 .nav-links a {
-  margin-left: 1rem;
   color: white;
   text-decoration: none;
   font-weight: 500;
+  font-size: 0.9rem;
+  white-space: nowrap;
 }
 
+/* ---- Login Card ---- */
 .ev-login-container {
   background-color: rgba(255, 255, 255, 0.95);
-  max-width: 500px;
-  margin: 3rem auto;
-  margin-top: 7rem;
-  padding: 2rem;
+  width: 90%;
+  max-width: 420px;
+  margin: 0 auto;
+  margin-top: 70px;
+  padding: 1.5rem;
   border-radius: 12px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
 
 .form-header {
   text-align: center;
-  margin-bottom: 1.5rem;
-}
-
-.station-logo {
-  height: 60px;
   margin-bottom: 1rem;
 }
 
+.station-logo {
+  height: 50px;
+  margin-bottom: 0.5rem;
+}
+
 .form-title {
-  font-size: 1.6rem;
+  font-size: 1.3rem;
   font-weight: bold;
   color: #0d3b66;
 }
 
 .form-subtitle {
-  font-size: 1rem;
-  font-weight: 500;
+  font-size: 0.9rem;
   color: #444;
 }
 
 .ev-login-form .form-group {
-  margin-bottom: 1rem;
+  margin-bottom: 0.8rem;
 }
 
 .ev-login-form label {
   display: block;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.3rem;
   font-weight: bold;
   color: #333;
+  font-size: 0.9rem;
 }
 
 .ev-login-form input {
   width: 100%;
-  padding: 0.6rem 5px;
+  padding: 0.55rem 8px;
   border: 1px solid #ccc;
   border-radius: 5px;
+  font-size: 0.95rem;
 }
 
 .submit-btn {
   background-color: #0d3b66;
   color: white;
-  padding: 0.7rem;
+  padding: 0.65rem;
   width: 100%;
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  margin-top: 0.5rem;
   transition: background-color 0.3s ease;
 }
 
-.submit-btn:hover {
-  background-color: #0955a3;
-}
+.submit-btn:hover { background-color: #0955a3; }
 
 .forgot-password,
 .no-account {
   text-align: center;
+  margin-top: 0.6rem;
 }
 
-.forgot-password a {
-  color: #0d3b66;
-  text-decoration: none;
-}
+.forgot-password a { color: #0d3b66; text-decoration: none; }
+.forgot-password a:hover { text-decoration: underline; }
+.no-account p { font-size: 0.85rem; }
+.no-account a { text-decoration: none; }
+.no-account a:hover { text-decoration: underline; }
 
-.forgot-password a:hover {
-  text-decoration: underline;
-}
-
-.no-account p {
-  font-size: 0.9rem;
-}
-
-.no-account a {
-  text-decoration: none;
-}
-
-.no-account a:hover {
-  text-decoration: underline;
+/* ---- Mobile ---- */
+@media (max-width: 480px) {
+  .ev-login-container {
+    width: 95%;
+    padding: 1.2rem;
+    margin-top: 65px;
+  }
+  .form-title { font-size: 1.15rem; }
 }

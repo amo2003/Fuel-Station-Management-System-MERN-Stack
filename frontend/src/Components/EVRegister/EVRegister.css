@@ -1,129 +1,134 @@
 .ev-register-page {
   font-family: Arial, sans-serif;
-  background-image: url('../../assets/f1.jpg'); 
+  background-image: url('../../assets/f1.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   min-height: 100vh;
-  padding-top: 100px; 
+  padding-top: 60px;
   backdrop-filter: blur(2px);
 }
 
+/* ---- Navbar ---- */
 .ev-navbar {
   position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 80px;
+  top: 0; left: 0; right: 0;
+  height: 56px;
   background-color: rgba(13, 59, 102, 0.95);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 2rem;
+  padding: 0 1rem;
   z-index: 1000;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  box-sizing: border-box;
 }
 
 .ev-navbar-logo {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
   color: white;
-  font-size: 20px;
+  font-size: 1rem;
   font-weight: bold;
 }
 
 .ev-navbar-logo img {
-  height: 60px;
-  width: 60px;
-  border-radius: 30px;
+  height: 36px;
+  width: 36px;
+  border-radius: 50%;
+}
+
+.ev-navbar-links {
+  display: flex;
+  flex-direction: row;
+  gap: 0.8rem;
 }
 
 .ev-navbar-links a {
   color: white;
   text-decoration: none;
-  margin-left: 1.5rem;
   font-weight: 500;
-  transition: color 0.3s ease;
+  font-size: 0.9rem;
+  white-space: nowrap;
 }
 
-.ev-navbar-links a:hover {
-  color: #aad9ff;
-}
+.ev-navbar-links a:hover { color: #aad9ff; }
 
+/* ---- Form Container ---- */
 .ev-register-container {
   background-color: rgba(255, 255, 255, 0.95);
-  max-width: 600px;
-  margin: auto;
-  margin-top: 50px;
-  padding: 2rem;
+  width: 92%;
+  max-width: 480px;
+  margin: 1rem auto;
+  padding: 1.2rem;
   border-radius: 12px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
 
 .ev-form-header {
   text-align: center;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
 }
 
 .ev-logo {
-  height: 60px;
-  width: 60px;
-  margin-bottom: 1rem;
-  border-radius: 30px;
+  height: 48px;
+  width: 48px;
+  margin-bottom: 0.5rem;
+  border-radius: 50%;
 }
 
 .ev-form-title {
-  font-size: 1.6rem;
+  font-size: 1.2rem;
   font-weight: bold;
   color: #0d3b66;
 }
 
 .ev-register-form .form-group {
-  margin-bottom: 1rem;
+  margin-bottom: 0.7rem;
 }
 
 .ev-register-form label {
   display: block;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.25rem;
   font-weight: bold;
   color: #333;
+  font-size: 0.88rem;
 }
 
 .ev-register-form input,
 .ev-register-form select {
   width: 100%;
-  padding: 0.6rem 5px;
+  padding: 0.5rem 8px;
   border: 1px solid #ccc;
   border-radius: 5px;
+  font-size: 0.95rem;
 }
 
 .ev-submit-btn {
   background-color: #0d3b66;
   color: white;
-  padding: 0.7rem;
+  padding: 0.6rem;
   width: 100%;
   border: none;
   border-radius: 5px;
+  font-size: 1rem;
+  font-weight: bold;
   cursor: pointer;
+  margin-top: 0.5rem;
   transition: background-color 0.3s ease;
 }
 
-.ev-submit-btn:hover {
-  background-color: #0955a3;
-}
+.ev-submit-btn:hover { background-color: #0955a3; }
 
 .ev-login-link {
-  margin-top: 1rem;
+  margin-top: 0.7rem;
   text-align: center;
-  font-size: 14px;
+  font-size: 0.85rem;
 }
 
-.ev-login-link a {
-  color: #0d3b66;
-  text-decoration: none;
-}
+.ev-login-link a { color: #0d3b66; text-decoration: none; }
+.ev-login-link a:hover { text-decoration: underline; }
 
-.ev-login-link a:hover {
-  text-decoration: underline;
+@media (max-width: 480px) {
+  .ev-register-container { width: 96%; padding: 1rem; }
 }
