@@ -130,7 +130,7 @@
   background-color: #0a8e0e;
   color: white;
   border: none;
-  width: 620px;
+  width: 100%; max-width: 620px;
   padding: 12px 18px;
   margin-top: 10px;
   border-radius: 6px;
@@ -148,7 +148,7 @@
   background-color: #da8300;
   color: white;
   border: none;
-  width: 620px;
+  width: 100%; max-width: 620px;
   padding: 12px 18px;
   margin-top: 10px;
   border-radius: 8px;

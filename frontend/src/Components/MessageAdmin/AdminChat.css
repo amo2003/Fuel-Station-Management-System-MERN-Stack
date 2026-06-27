@@ -122,7 +122,7 @@
 .ad-chat-wrapper {
   display: flex;
   margin: 20px auto;
-  width: 50rem;
+  width: 100%;
   max-width: 1200px;
   gap: 20px;
 }

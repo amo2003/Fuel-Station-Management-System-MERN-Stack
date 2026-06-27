@@ -1,5 +1,6 @@
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
+import './App.css';
 
 import Admin from './Components/Admin/Admin';
 
