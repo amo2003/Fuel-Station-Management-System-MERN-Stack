@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef, useCallback } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import "./AdminChat.css";
@@ -13,7 +13,7 @@ function AdminChat() {
   const [notifications, setNotifications] = useState({});
   const messagesEndRef = useRef(null);
 
-  const fetchPins = async () => {
+  const fetchPins = useCallback(async () => {
     try {
       const res = await axios.get(`${API}/api/chat/pins`);
       if (res.data.success) {
@@ -24,9 +24,9 @@ function AdminChat() {
         }, {}));
       }
     } catch (err) { console.error(err); }
-  };
+  }, []);
 
-  const fetchMessages = async (pin) => {
+  const fetchMessages = useCallback(async (pin) => {
     try {
       const res = await axios.get(`${API}/api/chat/pin/${pin}`);
       if (res.data.success) {
@@ -35,22 +35,20 @@ function AdminChat() {
         })));
       }
     } catch (err) { console.error(err); }
-  };
+  }, []);
 
-  // Poll pins every 5s
   useEffect(() => {
     fetchPins();
     const interval = setInterval(fetchPins, 5000);
     return () => clearInterval(interval);
-  }, []);
+  }, [fetchPins]);
 
-  // Poll messages every 3s when pin selected
   useEffect(() => {
     if (!selectedPin) return;
     fetchMessages(selectedPin);
     const interval = setInterval(() => fetchMessages(selectedPin), 3000);
     return () => clearInterval(interval);
-  }, [selectedPin]);
+  }, [selectedPin, fetchMessages]);
 
   useEffect(() => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });

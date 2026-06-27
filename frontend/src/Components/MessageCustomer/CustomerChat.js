@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef, useCallback } from "react";
 import { useParams } from "react-router-dom";
 import "./CustomerChat.css";
 import axios from "axios";
@@ -11,8 +11,7 @@ function CustomerChat() {
   const [messages, setMessages] = useState([]);
   const messagesEndRef = useRef(null);
 
-  // Fetch messages (polling every 3 seconds)
-  const fetchMessages = async () => {
+  const fetchMessages = useCallback(async () => {
     try {
       const res = await axios.get(`${API}/api/chat/pin/${pin}`);
       if (res.data.success) {
@@ -26,13 +25,13 @@ function CustomerChat() {
     } catch (err) {
       console.error(err);
     }
-  };
+  }, [pin]);
 
   useEffect(() => {
     fetchMessages();
     const interval = setInterval(fetchMessages, 3000);
     return () => clearInterval(interval);
-  }, [pin]);
+  }, [fetchMessages]);
 
   useEffect(() => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
