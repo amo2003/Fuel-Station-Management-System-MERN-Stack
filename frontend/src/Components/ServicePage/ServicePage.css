@@ -161,9 +161,10 @@
 .service-card:nth-child(6) h2::before { content: '🛠'; }
 
 @media (max-width: 768px) {
-  .nav-links {
-    flex-direction: column;
-    gap: 0.8rem;
+  .services-page-nav .nav-links {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0.5rem;
   }
 
   .services-page {

@@ -254,3 +254,15 @@ img {
     overflow-x: auto;
   }
 }
+
+/* ============================================
+   FORCE NAV-LINKS ROW - prevent column stacking
+   ============================================ */
+.nav-links,
+[class*="nav-links"],
+[class*="navbar-links"],
+[class*="nav_links"] {
+  flex-direction: row !important;
+  flex-wrap: nowrap !important;
+  align-items: center !important;
+}

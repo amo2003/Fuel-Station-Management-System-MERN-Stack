@@ -170,11 +170,6 @@
 
 /* Responsive */
 @media (max-width: 768px) {
-  .nav-links {
-    flex-direction: column;
-    gap: 0.8rem;
-  }
-
   .fuel-prices-page {
     padding: 2rem 1rem;
     margin: 2rem 1rem;
